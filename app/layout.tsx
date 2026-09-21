@@ -28,10 +28,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Dr. Marcelo de Souza Bezerra & Dra. Bruna' }],
   icons: {
     icon: [
-      { url: '/images/logo.png', type: 'image/png' },
+      { url: '/images/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logo.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: '/images/logo.png',
-    apple: '/images/logo.png',
+    shortcut: [{ url: '/images/logo.png', type: 'image/png' }],
+    apple: [{ url: '/images/logo.png', sizes: '180x180', type: 'image/png' }],
   },
 };
 
