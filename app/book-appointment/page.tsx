@@ -9,32 +9,32 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Book a Dental Appointment | Nova Dental Multan',
+  title: 'Agendar Consulta Odontológica | Dr. Marcelo de Souza Bezerra',
   description:
-    'Schedule your comprehensive restorative examination, 3D implant consultation, or hygiene appointment at Nova Dental on Bosan Road, Multan.',
+    'Solicite seu agendamento para implantes de carga imediata em 1 dia, odontologia domiciliar ou aparelhos ortodônticos com o Dr. Marcelo de Souza Bezerra em Manaus.',
   pathname: '/book-appointment/',
 });
 
 const BOOKING_STEPS = [
   {
     step: 1,
-    title: 'Submit Clinical Request',
-    description: 'Select your preferred treatment discipline, date, and time window via our secure digital form.',
+    title: 'Envie sua Solicitação',
+    description: 'Selecione o tratamento de interesse, data e horário preferencial através do formulário.',
   },
   {
     step: 2,
-    title: 'Coordinator Intake Review',
-    description: 'Our clinical triage coordinator reviews your request to ensure sufficient surgical time is reserved.',
+    title: 'Avaliação da Equipe',
+    description: 'Nossa equipe clínica analisa o pedido para reservar o tempo necessário para seu atendimento.',
   },
   {
     step: 3,
-    title: 'Direct Confirmation Call',
-    description: 'We telephone or email you within two business hours to confirm your exact appointment time.',
+    title: 'Confirmação via WhatsApp ou Telefone',
+    description: 'Entramos em contato rapidamente para confirmar seu horário e fornecer orientações.',
   },
   {
     step: 4,
-    title: 'Unhurried Clinical Visit',
-    description: 'Arrive at our Civic Center pavilion for your comprehensive 3D examination with Dr. Ahmad Raza or Dr. Farheen Zahra.',
+    title: 'Atendimento Atencioso',
+    description: 'Venha ao consultório ou receba o atendimento de odontologia domiciliar no conforto da sua casa.',
   },
 ];
 
@@ -44,17 +44,17 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Book Appointment', path: '/book-appointment/' }]} />
+          <Breadcrumbs items={[{ name: 'Agendar Consulta', path: '/book-appointment/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Direct Patient Consultation
+                  Atendimento Personalizado
                 </span>
-                <WordRevealH1 text="Reserve your unhurried clinical consultation." />
+                <WordRevealH1 text="Reserve sua avaliação odontológica." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="We allocate ample clinical time for every new patient examination. Meet directly with Dr. Ahmad Raza or Dr. Farheen Zahra for diagnostic 3D imaging and comprehensive treatment planning." />
+                  <ScrubbedParagraph text="Agende sua consulta para implantes de carga imediata (recuperação do sorriso em 1 dia), avaliação ortodôntica ou solicite atendimento domiciliar em Manaus com o Dr. Marcelo de Souza Bezerra e Dra. Bruna." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,15 +62,17 @@ export default function BookAppointmentPage() {
             <div className="lg:col-span-4 lg:pl-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Immediate Scheduling Assistance:</span>
+                  <span className="font-medium text-forest block">Agendamento via WhatsApp:</span>
                   <p className="text-forest-ink/70">
-                    Prefer to schedule by telephone? Our reception team is available during clinic hours.
+                    Prefere falar diretamente conosco agora? Clique abaixo para abrir o WhatsApp.
                   </p>
                   <a
-                    href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
-                    className="font-display text-17 text-forest font-medium block hover:underline"
+                    href="https://api.whatsapp.com/send?phone=5592992656280"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-display text-17 text-forest font-semibold block hover:underline"
                   >
-                    {CLINIC_INFO.contact.phone}
+                    WhatsApp: {CLINIC_INFO.contact.whatsapp}
                   </a>
                 </div>
               </AnimateOnScroll>
@@ -88,13 +90,13 @@ export default function BookAppointmentPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Transparent Workflow
+                    Como Funciona
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                    How our appointment process works
+                    Etapas do seu agendamento
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    Because our specialists perform complex surgical and microsurgical procedures, all consultations are scheduled with confirmed clinical time allocations.
+                    Priorizamos a pontualidade e o tempo necessário para cada paciente, garantindo uma consulta completa e esclarecedora.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -138,25 +140,25 @@ export default function BookAppointmentPage() {
             {/* Contact Options */}
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Direct Contact</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Communication Channels</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contato Direto</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Canais de Atendimento</h3>
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
-                    <span className="text-forest-ink/60 block">Main Desk:</span>
+                    <span className="text-forest-ink/60 block">WhatsApp:</span>
+                    <a href="https://api.whatsapp.com/send?phone=5592992656280" target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
+                      {CLINIC_INFO.contact.whatsapp}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-forest-ink/60 block">Telefone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                   <div>
-                    <span className="text-forest-ink/60 block">Clinical Email:</span>
+                    <span className="text-forest-ink/60 block">E-mail:</span>
                     <a href={`mailto:${CLINIC_INFO.contact.email}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.email}
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-forest-ink/60 block">WhatsApp:</span>
-                    <a href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`} className="font-medium text-forest hover:underline">
-                      {CLINIC_INFO.contact.whatsapp}
                     </a>
                   </div>
                 </div>
@@ -166,25 +168,15 @@ export default function BookAppointmentPage() {
             {/* Opening Hours */}
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Schedule</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Clinical Operating Hours</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Horário</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Horário de Atendimento</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
-                  <div className="flex justify-between">
-                    <span>Mon – Thu</span>
-                    <span className="tabular-nums">08:00 – 17:30</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Friday</span>
-                    <span className="tabular-nums">08:00 – 16:30</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="tabular-nums">09:00 – 14:00</span>
-                  </div>
-                  <div className="flex justify-between text-forest font-medium pt-1 border-t border-mist">
-                    <span>Sunday</span>
-                    <span>Emergency On-Call</span>
-                  </div>
+                  {CLINIC_INFO.schedule.map((item) => (
+                    <div key={item.day} className="flex justify-between">
+                      <span>{item.day}</span>
+                      <span className="tabular-nums">{item.hours}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </AnimateOnScroll>
@@ -192,17 +184,15 @@ export default function BookAppointmentPage() {
             {/* Physical Location */}
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Civic Center Pavilion</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Localização</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Consultório em Manaus</h3>
                 <address className="not-italic font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  {CLINIC_INFO.primaryLocation.street}
+                  {CLINIC_INFO.primaryLocation.street} - {CLINIC_INFO.primaryLocation.suite}
                   <br />
-                  {CLINIC_INFO.primaryLocation.suite}
-                  <br />
-                  {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.state} {CLINIC_INFO.primaryLocation.postalCode}
+                  {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, Brasil
                 </address>
                 <p className="font-body text-13 text-forest-ink/60">
-                  Validated patient parking via Birch Street.
+                  Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas.
                 </p>
               </div>
             </AnimateOnScroll>

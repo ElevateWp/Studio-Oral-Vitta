@@ -98,7 +98,7 @@ export default function PinnedHorizontalTrack({
   return (
     <section
       ref={containerRef}
-      className={`relative w-full bg-paper py-12 md:py-16 lg:py-20 overflow-hidden z-10 ${className}`}
+      className={`relative w-full bg-paper py-12 md:py-16 lg:py-20 z-10 ${className}`}
     >
       {/* Header bar with counter & progress rule */}
       <div className="max-w-site mx-auto px-6 md:px-12 mb-8 md:mb-12 flex flex-wrap items-end justify-between gap-4">
@@ -124,18 +124,18 @@ export default function PinnedHorizontalTrack({
         </div>
       </div>
 
-      {/* Horizontal Track on Desktop / Responsive Horizontal Scroll Snap on Tablet & Mobile */}
-      <div className="w-full">
+      {/* Horizontal Track: GSAP scroll on desktop / native touch scroll on mobile+tablet */}
+      <div className="w-full overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-none" style={{ WebkitOverflowScrolling: 'touch' }}>
         <div
           ref={trackRef}
-          className="flex flex-row gap-6 px-6 md:px-12 w-max overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-none snap-x snap-mandatory lg:snap-none will-change-transform"
+          className="flex flex-row gap-4 sm:gap-6 px-6 md:px-12 w-max pb-4 lg:pb-0 snap-x snap-mandatory lg:snap-none will-change-transform"
         >
           {items.map((item, idx) => {
             const isForest = item.theme === 'forest' || idx % 2 === 1;
             return (
               <div
                 key={item.id}
-                className={`w-[85vw] sm:w-[420px] lg:w-[480px] xl:w-[520px] flex-shrink-0 snap-center flex flex-col justify-between p-7 sm:p-8 md:p-10 lg:p-12 transition-colors duration-300 border border-mist ${
+                className={`w-[82vw] sm:w-[400px] lg:w-[480px] xl:w-[520px] flex-shrink-0 snap-center flex flex-col justify-between p-6 sm:p-8 md:p-10 lg:p-12 transition-colors duration-300 border border-mist ${
                   isForest ? 'bg-forest text-paper' : 'bg-paper text-forest-ink'
                 }`}
               >
@@ -186,6 +186,18 @@ export default function PinnedHorizontalTrack({
             );
           })}
         </div>
+      </div>
+
+      {/* Mobile swipe hint — only visible on mobile */}
+      <div className="flex lg:hidden justify-center mt-4 gap-1.5 px-6">
+        {items.map((_, idx) => (
+          <span
+            key={idx}
+            className={`w-2 h-2 rounded-full transition-all ${
+              idx === currentIndex - 1 ? 'bg-[#08A9DE] w-4' : 'bg-[#D7E1E8]'
+            }`}
+          />
+        ))}
       </div>
     </section>
   );

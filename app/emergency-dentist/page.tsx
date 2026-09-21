@@ -9,28 +9,24 @@ import JsonLd from '@/components/ui/JsonLd';
 import { createMetadata, generateFaqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Emergency Dentist Multan | Same-Day Dental Pain Relief',
+  title: 'Atendimento Odontológico de Urgência em Manaus | Dr. Marcelo',
   description:
-    'Urgent dental care in Multan for severe toothache, knocked-out teeth, broken crowns, dental abscesses, and trauma. Call/WhatsApp +92 370 3301987.',
+    'Atendimento odontológico para dor de dente intensa, dente quebrado ou emergências em Manaus. WhatsApp/Telefone: +55 92 99265-6280.',
   pathname: '/emergency-dentist/',
 });
 
 const EMERGENCY_FAQS = [
   {
-    question: 'How quickly can I be seen for a dental emergency today?',
-    answer: 'We reserve emergency surgical slots every morning and afternoon. Patients with acute dental trauma, avulsed teeth, or severe facial swelling are prioritized for immediate same-day triage within 1 to 2 hours of calling.',
+    question: 'Como funciona o atendimento de urgência para dor de dente?',
+    answer: 'Pacientes com dor aguda, trauma ou inchaço são priorizados para atendimento rápido. Entre em contato pelo WhatsApp (+55 92 99265-6280) para orientação e agendamento.',
   },
   {
-    question: 'What if my dental emergency happens after hours or on Sunday?',
-    answer: 'Our direct emergency line (+1 (415) 890-4129) connects to our on-call clinical doctor 24/7. We provide immediate tele-triage, prescribe necessary emergency analgesics or antibiotics, and open our surgical suite for urgent trauma cases.',
+    question: 'O consultório oferece atendimento domiciliar de urgência?',
+    answer: 'Sim, o Dr. Marcelo de Souza Bezerra realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Manaus.',
   },
   {
-    question: 'How do I save a tooth that was knocked out completely?',
-    answer: 'Handle the tooth ONLY by the top white crown. Never touch the root. Rinse gently for 5 seconds in cold milk or saline if dirty. Attempt to slide it gently back into the socket and bite softly on a clean cloth. If unable, store it in whole milk or saliva and arrive at our clinic within 60 minutes.',
-  },
-  {
-    question: 'How much does an emergency dental visit cost?',
-    answer: 'Emergency diagnostic triage and localized digital imaging starts at $150–$250. Exact procedure fees (such as pulpal debridement or surgical stabilization) are itemized in writing before treatment is performed.',
+    question: 'O que fazer caso um dente quebre ou caia por trauma?',
+    answer: 'Segure o dente apenas pela coroa, nunca pela raiz. Guarde-o em leite ou saliva e venha imediatamente ao consultório ou entre em contato pelo nosso WhatsApp (+55 92 99265-6280).',
   },
 ];
 
@@ -39,22 +35,7 @@ export default function EmergencyDentistPage() {
     <div className="flex flex-col w-full bg-paper">
       <JsonLd data={generateFaqSchema(EMERGENCY_FAQS)} />
 
-      {/* TOP EMERGENCY URGENCY BANNER */}
-      <div className="bg-forest text-paper py-3 px-6 border-b border-mist/20">
-        <div className="max-w-site mx-auto flex flex-wrap items-center justify-between gap-4 font-body text-13">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-lime animate-ping" />
-            <span className="font-semibold text-lime">Emergency Slots Open Today:</span>
-            <span>Same-Day Pain Relief & Trauma Care</span>
-          </div>
-          <a
-            href={`tel:${CLINIC_INFO.contact.emergencyPhone.replace(/[^0-9+]/g, '')}`}
-            className="font-bold text-paper underline hover:text-lime"
-          >
-            Direct Line: {CLINIC_INFO.contact.emergencyPhone}
-          </a>
-        </div>
-      </div>
+
 
       {/* SECTION 1: Emergency Introduction & Immediate Action */}
       <section className="py-12 md:py-16 bg-paper border-b border-mist">

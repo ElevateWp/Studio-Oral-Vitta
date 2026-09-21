@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Clinical Methodology
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Why patients and referring dentists choose Nova Dental
+                Por que escolher o Consultório do Dr. Marcelo de Souza Bezerra
               </h2>
 
               <div className="divide-y divide-mist">
@@ -57,21 +57,47 @@ export default function HomeWhyUs() {
             </AnimateOnScroll>
           </div>
 
-          {/* Columns 7–12: High-Resolution Clinical Photograph with Subtle Parallax */}
+          {/* Columns 7–12: Real clinic interior photos */}
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
-              <div className="relative aspect-[4/3] sm:aspect-[4/5] bg-mist overflow-hidden border border-mist w-full shadow-sm">
-                <MediaParallax speed={0.06} className="w-full h-full">
+              <div className="grid grid-cols-2 gap-3">
+                {/* Main large image */}
+                <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
+                  <MediaParallax speed={0.06} className="w-full h-full">
+                    <Image
+                      src="/images/interior-operatory.png"
+                      alt="Sala de atendimento odontológico - Consultório Dr. Marcelo de Souza Bezerra"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </MediaParallax>
+                  <div className="absolute bottom-3 left-3 bg-[#0A2472]/90 backdrop-blur-sm text-white font-body text-12 px-3 py-1 font-medium">
+                    Sala de Tratamento Odontológico
+                  </div>
+                </div>
+                {/* Second interior image */}
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/dental-operatory.jpg"
-                    alt="Nova Dental clinical treatment suite and modern surgical setup"
+                    src="/images/interior-office.png"
+                    alt="Consultório Dr. Marcelo — Recepção e área de atendimento"
                     fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
-                </MediaParallax>
-                <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Nova Dental Clinical Operatory Suite
+                </div>
+                {/* Doctor portrait */}
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#D9F3FC] overflow-hidden border border-mist shadow-sm">
+                  <Image
+                    src="/images/dr-marcelo.png"
+                    alt="Dr. Marcelo de Souza Bezerra — Cirurgião-Dentista"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#0A2472]/80 text-white font-body text-12 px-3 py-2 text-center">
+                    Dr. Marcelo de Souza Bezerra
+                  </div>
                 </div>
               </div>
             </AnimateOnScroll>

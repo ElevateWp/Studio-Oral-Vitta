@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-cleaning')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[1] || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Dental Cleaning & Guided Airflow Hygiene Multan',
+  title: 'Limpeza Dental & Profilaxia em Manaus | Dra. Bruna & Dr. Marcelo',
   description:
-    'Therapeutic dental cleanings utilizing gentle piezoelectric scaling and non-abrasive glycine airflow technology at Nova Dental Multan supervised by Dr. Farheen Zahra (BDS, RDS).',
+    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus.',
   pathname: '/dental-cleaning/',
 });
 

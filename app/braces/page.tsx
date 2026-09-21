@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'braces')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[1] || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Braces & Clear Aligners Multan | Orthodontics',
+  title: 'Aparelhos Ortodônticos & Aligners em Manaus | Dra. Bruna & Dr. Marcelo',
   description:
-    'Digitally planned clear aligners and translucent ceramic braces in Multan directed by specialist clinician Dr. Farheen Zahra (BDS, RDS).',
+    'Aparelhos ortodônticos convencionais, estéticos e alinhadores em Manaus com planejamento cuidadoso e atendimento humanizado.',
   pathname: '/braces/',
 });
 

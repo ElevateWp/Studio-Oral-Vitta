@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Top-Rated Dental Clinic in Multan | Nova Dental',
+  title: 'Consultório Odontológico Dr. Marcelo de Souza Bezerra | Manaus - AM',
   description:
-    'Nova Dental Clinic Multan (5.0 ★ Google Rated) led by Dr. Ahmad Raza & Dr. Farheen Zahra. Specializing in dental implants, painless root canals, braces & cosmetic smile design on Bosan Road, Multan.',
+    'Consultório Odontológico Dr. Marcelo de Souza Bezerra (4.7 ★ no Google Maps). Implantes de carga imediata para trazer seu sorriso em 1 dia, odontologia domiciliar e aparelhos ortodônticos em Manaus.',
   pathname: '/',
 });
 

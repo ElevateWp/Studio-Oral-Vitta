@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://novadental.com';
+export const BASE_URL = 'https://drmarcelosouzabezerra.com.br';
 
 export function createMetadata({
   title,
@@ -15,7 +15,7 @@ export function createMetadata({
   image?: string;
 }): Metadata {
   const url = `${BASE_URL}${pathname}`;
-  const fullTitle = `${title} | Nova Dental Clinic`;
+  const fullTitle = `${title} | ${CLINIC_INFO.name}`;
   const defaultImage = `${BASE_URL}/images/og-nova-dental.jpg`;
 
   return {
@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'en_US',
+      locale: 'pt_BR',
       type: 'website',
       images: [
         {
@@ -87,23 +87,23 @@ export function generateLocalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Saturday'],
-        opens: '11:00',
-        closes: '22:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '18:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Friday'],
-        opens: '15:00',
-        closes: '22:00',
+        dayOfWeek: ['Saturday'],
+        opens: '08:00',
+        closes: '14:00',
       },
     ],
     medicalSpecialty: [
       'Dentistry',
-      'Prosthodontics',
-      'Endodontics',
+      'Implantology',
       'Orthodontics',
-      'Periodontics',
+      'Endodontics',
+      'Domiciliary Dentistry',
     ],
   };
 }

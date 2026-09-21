@@ -8,24 +8,24 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://novadental.com'),
+  metadataBase: new URL('https://drmarcelosouzabezerra.com.br'),
   title: {
-    default: 'Nova Dental | Restorative & Surgical Dentistry',
-    template: '%s | Nova Dental Clinic',
+    default: 'Consultório Odontológico Dr. Marcelo de Souza Bezerra | Manaus',
+    template: '%s | Dr. Marcelo de Souza Bezerra',
   },
   description:
-    'Nova Dental Clinic led by Dr. Ahmad Raza (Owner) & Dr. Farheen Zahra (BAMDC Demonstrator) dedicated to biologically conservative dental implants, microscopic root canals, clear aligner orthodontics, and restorative excellence.',
+    'Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus. Especialistas em implantes dentários com técnica de carga imediata para recuperar seu sorriso em 1 dia, odontologia domiciliar e aparelhos ortodônticos.',
   keywords: [
-    'Nova Dental',
-    'Dr Ahmad Raza Dentist',
-    'Dr Farheen Zahra BAMDC',
-    'Dental Implants',
-    'Microscopic Root Canal',
-    'Clear Aligners',
-    'Emergency Dentist',
-    'Cosmetic Dentistry',
+    'Dr Marcelo de Souza Bezerra',
+    'Dra Bruna',
+    'Consultório Odontológico Manaus',
+    'Implantes Carga Imediata Manaus',
+    'Sorriso em 1 Dia',
+    'Odontologia Domiciliar Manaus',
+    'Aparelhos Ortodonticos Manaus',
+    'Dentista Cachoeirinha Manaus',
   ],
-  authors: [{ name: 'Dr. Ahmad Raza & Dr. Farheen Zahra' }],
+  authors: [{ name: 'Dr. Marcelo de Souza Bezerra & Dra. Bruna' }],
   icons: {
     icon: [
       { url: '/images/logo.png', type: 'image/png' },
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -50,11 +50,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-lime selection:text-forest-ink">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#D9F3FC] selection:text-[#0A2472]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
-          Skip to main content
+          Pular para o conteúdo principal
         </a>
         <LenisProvider>
           <Navbar />

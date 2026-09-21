@@ -9,14 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: 'var(--paper)',
-        forest: {
-          DEFAULT: 'var(--forest)',
-          ink: 'var(--forest-ink)',
-          light: '#254D3D',
+        paper: {
+          DEFAULT: '#FFFFFF',
+          secondary: '#F4F7FA',
         },
-        lime: 'var(--lime)',
-        mist: 'var(--mist)',
+        forest: {
+          DEFAULT: '#0A2472',
+          ink: '#111827',
+          light: '#08A9DE',
+          navy: '#0A2472',
+        },
+        brand: {
+          DEFAULT: '#08A9DE',
+          hover: '#0496C7',
+          red: '#F32632',
+          soft: '#D9F3FC',
+          navy: '#0A2472',
+          text: '#111827',
+          secondaryText: '#0A2472',
+          border: '#D7E1E8',
+        },
+        lime: '#08A9DE',
+        mist: '#D7E1E8',
+        softBlue: '#D9F3FC',
+        redAccent: '#F32632',
+        navy: {
+          DEFAULT: '#0A2472',
+          dark: '#081D5C',
+        },
       },
       fontFamily: {
         display: ['var(--font-display)', 'system-ui', '-apple-system', 'sans-serif'],

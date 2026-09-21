@@ -1,7 +1,7 @@
 import React from 'react';
 import PanelWipe from '@/components/motion/PanelWipe';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
-import { PATIENT_REVIEWS } from '@/lib/clinic-data';
+import { PATIENT_REVIEWS, CLINIC_INFO } from '@/lib/clinic-data';
 
 export default function HomeReviews() {
   return (
@@ -11,15 +11,15 @@ export default function HomeReviews() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <span className="font-body text-13 text-lime block mb-2 uppercase tracking-wider font-semibold">
-                Google Maps Verified Reviews
+                Avaliações Verificadas no Google Maps
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                What patients say about Nova Dental Multan
+                O que nossos pacientes dizem sobre nosso atendimento
               </h2>
             </div>
             <div className="flex items-center gap-3 bg-paper/10 border border-mist/20 px-4 py-2.5 rounded-none self-start md:self-auto">
-              <span className="text-lime text-18 font-bold">5.0 ★★★★★</span>
-              <span className="text-paper/80 font-body text-13">28 Google Reviews</span>
+              <span className="text-lime text-18 font-bold">4.7 ★★★★★</span>
+              <span className="text-paper/80 font-body text-13">59 Avaliações no Google</span>
             </div>
           </div>
         </AnimateOnScroll>

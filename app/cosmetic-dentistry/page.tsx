@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'cosmetic-dentistry')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Cosmetic Dentistry & Porcelain Veneers Multan',
+  title: 'Odontologia Estética & Facetas em Manaus | Dr. Marcelo de Souza Bezerra',
   description:
-    'Micro-layered porcelain veneers, cosmetic composite bonding, and Digital Smile Design at Nova Dental Multan led by Dr. Ahmad Raza (BDS, RDS).',
+    'Lentes de contato dental, facetas cerâmicas e estética do sorriso pelo Dr. Marcelo de Souza Bezerra em Manaus.',
   pathname: '/cosmetic-dentistry/',
 });
 

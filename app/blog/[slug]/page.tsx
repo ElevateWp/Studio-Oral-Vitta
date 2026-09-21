@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BLOG_POSTS, DENTISTS, SERVICES } from '@/lib/clinic-data';
+import { BLOG_POSTS, CLINIC_INFO, DENTISTS, SERVICES } from '@/lib/clinic-data';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import Button from '@/components/ui/Button';
 import Accordion from '@/components/ui/Accordion';
@@ -62,11 +62,11 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Nova Dental Surgical Faculty',
+      name: author?.name || 'Dr. Marcelo de Souza Bezerra',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Nova Dental Clinic',
+      name: CLINIC_INFO.name,
     },
   };
 

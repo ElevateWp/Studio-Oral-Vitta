@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-implants')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Dental Implants Multan | Titanium & Zirconia Fixtures',
+  title: 'Implantes Dentários & Carga Imediata em Manaus | Dr. Marcelo de Souza Bezerra',
   description:
-    'Permanent surgical dental implants placed under 3D CBCT computer guidance by lead dental surgeon Dr. Ahmad Raza (BDS, RDS) in Multan.',
+    'Implantes dentários de carga imediata para trazer seu sorriso em 1 dia com fixação precisa em titânio e zircônia pelo Dr. Marcelo de Souza Bezerra em Manaus.',
   pathname: '/dental-implants/',
 });
 
@@ -200,7 +200,7 @@ export default function DentalImplantsPage() {
                 Surgical Modalities
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Implant configurations offered at Nova Dental
+                Opções de Implantes e Carga Imediata
               </h2>
             </div>
           </AnimateOnScroll>

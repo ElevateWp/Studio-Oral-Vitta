@@ -111,12 +111,12 @@ export default function PagePreloader() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#1B3D30] text-paper overflow-hidden select-none"
+      className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0A2472] text-paper overflow-hidden select-none"
       style={{ willChange: 'transform' }}
-      aria-label="Loading Nova Dental"
+      aria-label="Loading Consultório Odontológico"
     >
       {/* Subtle Background Radial Aura */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,228,95,0.08)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(8,169,222,0.2)_0%,transparent_70%)] pointer-events-none" />
 
       <div
         ref={contentRef}
@@ -125,11 +125,11 @@ export default function PagePreloader() {
         {/* Animated 3D Logo */}
         <div
           ref={logoRef}
-          className="relative w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-2xl p-2.5 flex items-center justify-center mb-6 border border-lime/30"
+          className="relative w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-2xl p-2.5 flex items-center justify-center mb-6 border border-[#08A9DE]/40"
         >
           <Image
             src="/images/logo.png"
-            alt="Nova Dental Logo"
+            alt="Dr. Marcelo de Souza Bezerra Logo"
             width={80}
             height={80}
             priority
@@ -140,9 +140,9 @@ export default function PagePreloader() {
         {/* Primary Requested Uppercase Welcome Text */}
         <h1
           ref={titleRef}
-          className="font-display text-24 sm:text-33 md:text-41 font-medium text-paper uppercase tracking-[0.08em] leading-tight mb-3 text-shadow-sm"
+          className="font-display text-20 sm:text-28 md:text-33 font-medium text-paper uppercase tracking-[0.08em] leading-tight mb-3 text-shadow-sm"
         >
-          WELCOME TO NOVA DENTAL
+          DR. MARCELO DE SOUZA BEZERRA
         </h1>
 
         {/* Delicate Golden-Lime Divider Line */}
@@ -154,9 +154,9 @@ export default function PagePreloader() {
         {/* Subtitle / Doctors */}
         <p
           ref={subtitleRef}
-          className="font-body text-13 sm:text-15 text-paper/75 uppercase tracking-[0.18em]"
+          className="font-body text-12 sm:text-13 text-paper/85 uppercase tracking-[0.15em]"
         >
-          Dr. Ahmad Raza & Dr. Farheen Zahra
+          Implantes • Odontologia Domiciliar • Aparelhos Ortodônticos
         </p>
       </div>
     </div>

@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'root-canal')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[1] || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Microscopic Root Canal Treatment Multan | Endodontics',
+  title: 'Tratamento de Canal em Manaus | Dra. Bruna & Dr. Marcelo',
   description:
-    'Painless microscopic root canal therapy at Nova Dental Multan by specialist clinician Dr. Farheen Zahra (BDS, RDS). High-magnification surgical operating precision.',
+    'Tratamento de canal moderno, seguro e sem dor em Manaus pela Dra. Bruna no Consultório Odontológico Dr. Marcelo de Souza Bezerra.',
   pathname: '/root-canal/',
 });
 

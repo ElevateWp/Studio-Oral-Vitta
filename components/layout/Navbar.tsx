@@ -48,28 +48,25 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-site mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
-        {/* Prominent Enriched Brand Logo */}
+        {/* Brand Logo - compact on mobile */}
         <Link
           href="/"
-          className="group flex items-center gap-3 sm:gap-4 no-underline focus-visible:outline-offset-4 flex-shrink-0"
-          aria-label="Nova Dental Home"
+          className="group flex items-center gap-2 sm:gap-3 no-underline focus-visible:outline-offset-4 flex-shrink-0 min-w-0"
+          aria-label="Consultório Odontológico Dr. Marcelo de Souza Bezerra"
         >
-          <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200/80 p-1.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex-shrink-0 bg-white rounded-xl shadow-md border border-gray-200/80 p-1 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
             <Image
               src="/images/logo.png"
-              alt="Nova Dental Logo"
-              width={64}
-              height={64}
+              alt="Dr. Marcelo de Souza Bezerra Logo"
+              width={56}
+              height={56}
               priority
               className="object-contain w-full h-full"
             />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display text-20 sm:text-24 md:text-28 tracking-[-0.03em] font-semibold text-forest-ink group-hover:text-forest transition-colors leading-tight">
-              Nova Dental
-            </span>
-            <span className="font-body text-12 sm:text-13 font-medium text-forest-ink/70 hidden sm:block">
-              Dr. Ahmad Raza & Dr. Farheen Zahra
+          <div className="flex flex-col min-w-0">
+            <span className="font-display tracking-[-0.02em] font-bold text-[#111827] group-hover:text-[#08A9DE] transition-colors leading-tight text-14 sm:text-16 md:text-17 lg:text-18 whitespace-nowrap">
+              Dr. Marcelo de Souza Bezerra
             </span>
           </div>
         </Link>
@@ -90,14 +87,14 @@ export default function Navbar() {
                 pathname?.includes('teeth-whitening') ||
                 pathname?.includes('braces') ||
                 pathname?.includes('cosmetic-dentistry')
-                  ? 'text-forest font-semibold'
-                  : 'text-forest-ink/80 hover:text-forest-ink font-medium'
+                  ? 'text-[#08A9DE] font-semibold'
+                  : 'text-[#111827]/80 hover:text-[#08A9DE] font-medium'
               }`}
               aria-expanded={servicesDropdownOpen}
             >
               <span>Treatments</span>
               <span
-                className={`w-1.5 h-1.5 border-r border-b border-forest-ink/60 transition-transform duration-200 ${
+                className={`w-1.5 h-1.5 border-r border-b border-[#0A2472]/60 transition-transform duration-200 ${
                   servicesDropdownOpen ? '-rotate-135 -translate-y-0.5' : 'rotate-45 translate-y-[-2px]'
                 }`}
                 aria-hidden="true"
@@ -107,7 +104,7 @@ export default function Navbar() {
             {/* Dropdown Panel with Pure White Background and Smooth Shadow */}
             {servicesDropdownOpen && (
               <div className="absolute top-full -left-4 pt-2 w-64 z-50 animate-fade-in">
-                <div className="p-2 bg-white border border-gray-100 shadow-[0_12px_36px_rgba(0,0,0,0.12)] rounded-2xl">
+                <div className="p-2 bg-white border border-[#D7E1E8] shadow-[0_12px_36px_rgba(10,36,114,0.08)] rounded-2xl">
                   <div className="space-y-0.5">
                     {SERVICES.map((s) => (
                       <Link
@@ -115,8 +112,8 @@ export default function Navbar() {
                         href={`/${s.slug}/`}
                         className={`block px-3.5 py-2 text-14 font-body transition-all duration-200 rounded-xl ${
                           pathname === `/${s.slug}/`
-                            ? 'bg-emerald-50 text-forest font-semibold shadow-xs'
-                            : 'text-forest-ink/85 hover:bg-emerald-50/70 hover:text-forest hover:translate-x-1'
+                            ? 'bg-[#D9F3FC] text-[#08A9DE] font-semibold shadow-xs'
+                            : 'text-[#111827]/85 hover:bg-[#D9F3FC]/50 hover:text-[#08A9DE] hover:translate-x-1'
                         }`}
                       >
                         <span className="block font-medium">{s.name}</span>
@@ -132,8 +129,8 @@ export default function Navbar() {
             href="/about/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname === '/about/'
-                ? 'text-forest font-semibold'
-                : 'text-forest-ink/80 hover:text-forest-ink font-medium'
+                ? 'text-[#08A9DE] font-semibold'
+                : 'text-[#111827]/80 hover:text-[#08A9DE] font-medium'
             }`}
           >
             About Us
@@ -143,8 +140,8 @@ export default function Navbar() {
             href="/dentists/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname?.startsWith('/dentists')
-                ? 'text-forest font-semibold'
-                : 'text-forest-ink/80 hover:text-forest-ink font-medium'
+                ? 'text-[#08A9DE] font-semibold'
+                : 'text-[#111827]/80 hover:text-[#08A9DE] font-medium'
             }`}
           >
             Our Doctors
@@ -154,8 +151,8 @@ export default function Navbar() {
             href="/blog/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname?.startsWith('/blog')
-                ? 'text-forest font-semibold'
-                : 'text-forest-ink/80 hover:text-forest-ink font-medium'
+                ? 'text-[#08A9DE] font-semibold'
+                : 'text-[#111827]/80 hover:text-[#08A9DE] font-medium'
             }`}
           >
             Clinical Journal
@@ -165,8 +162,8 @@ export default function Navbar() {
             href="/contact/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname === '/contact/'
-                ? 'text-forest font-semibold'
-                : 'text-forest-ink/80 hover:text-forest-ink font-medium'
+                ? 'text-[#08A9DE] font-semibold'
+                : 'text-[#111827]/80 hover:text-[#08A9DE] font-medium'
             }`}
           >
             Contact
@@ -174,15 +171,20 @@ export default function Navbar() {
         </nav>
 
         {/* Right CTA / Phone + Emergency */}
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <Link
             href="/emergency-dentist/"
-            className="hidden sm:inline-flex font-body text-13 font-semibold text-forest bg-mist/60 hover:bg-mist px-3 py-1.5 transition-colors border border-mist"
+            className="hidden md:inline-flex font-body text-12 sm:text-13 font-semibold text-white bg-[#F32632] hover:bg-[#d91d28] px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full transition-colors shadow-sm whitespace-nowrap"
           >
             Emergency 24/7
           </Link>
 
-          <Button href="/book-appointment/" variant="forest" size="sm" className="hidden sm:inline-flex text-13 px-4 py-2 font-medium">
+          <Button
+            href="/book-appointment/"
+            variant="forest"
+            size="sm"
+            className="hidden sm:inline-flex text-12 sm:text-13 px-3.5 py-1.5 sm:px-4 sm:py-2 font-medium whitespace-nowrap"
+          >
             Book Appointment
           </Button>
 
@@ -190,23 +192,23 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 text-forest-ink focus-visible:outline-offset-2 flex items-center justify-center cursor-pointer"
+            className="xl:hidden p-2 text-[#111827] focus-visible:outline-offset-2 flex items-center justify-center cursor-pointer rounded-lg hover:bg-[#F4F7FA] transition-colors"
             aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
             aria-expanded={mobileMenuOpen}
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <span
-                className={`w-full h-[2px] bg-forest-ink transition-transform duration-250 ${
+                className={`w-full h-[2px] bg-[#111827] transition-transform duration-250 ${
                   mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`w-full h-[2px] bg-forest-ink transition-opacity duration-200 ${
+                className={`w-full h-[2px] bg-[#111827] transition-opacity duration-200 ${
                   mobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
               <span
-                className={`w-full h-[2px] bg-forest-ink transition-transform duration-250 ${
+                className={`w-full h-[2px] bg-[#111827] transition-transform duration-250 ${
                   mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -217,14 +219,14 @@ export default function Navbar() {
 
       {/* Mobile / Tablet Drawer Menu */}
       <div
-        className={`xl:hidden fixed inset-x-0 top-full h-[calc(100dvh-100%)] bg-white border-t border-gray-200/80 overflow-y-auto px-6 py-6 flex flex-col justify-between z-[999] transition-all duration-300 ease-in-out shadow-2xl ${
+        className={`xl:hidden fixed inset-x-0 top-full h-[calc(100dvh-100%)] bg-white border-t border-[#D7E1E8] overflow-y-auto px-6 py-6 flex flex-col justify-between z-[999] transition-all duration-300 ease-in-out shadow-2xl ${
           mobileMenuOpen
             ? 'opacity-100 pointer-events-auto translate-y-0'
             : 'opacity-0 pointer-events-none -translate-y-4'
         }`}
       >
         <div className="flex flex-col space-y-4">
-          <span className="font-body text-13 text-forest-ink/60 font-semibold uppercase tracking-wider">
+          <span className="font-body text-12 text-[#0A2472] font-bold uppercase tracking-wider">
             Treatments & Services
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-2">
@@ -233,8 +235,8 @@ export default function Navbar() {
                 key={s.slug}
                 href={`/${s.slug}/`}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`font-body text-15 py-1.5 ${
-                  pathname === `/${s.slug}/` ? 'text-forest font-semibold' : 'text-forest-ink hover:text-forest'
+                className={`font-body text-15 py-1.5 transition-colors ${
+                  pathname === `/${s.slug}/` ? 'text-[#08A9DE] font-semibold' : 'text-[#111827] hover:text-[#08A9DE]'
                 }`}
               >
                 {s.navLabel}
@@ -242,12 +244,12 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="pt-4 border-t border-mist flex flex-col space-y-3">
+          <div className="pt-4 border-t border-[#D7E1E8] flex flex-col space-y-3">
             <Link
               href="/about/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`font-body text-17 ${
-                pathname === '/about/' ? 'text-forest font-semibold' : 'text-forest-ink hover:text-forest'
+              className={`font-body text-16 transition-colors ${
+                pathname === '/about/' ? 'text-[#08A9DE] font-semibold' : 'text-[#111827] hover:text-[#08A9DE]'
               }`}
             >
               About Us
@@ -255,26 +257,24 @@ export default function Navbar() {
             <Link
               href="/dentists/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`font-body text-17 ${
-                pathname?.startsWith('/dentists') ? 'text-forest font-semibold' : 'text-forest-ink hover:text-forest'
+              className={`font-body text-16 transition-colors ${
+                pathname?.startsWith('/dentists') ? 'text-[#08A9DE] font-semibold' : 'text-[#111827] hover:text-[#08A9DE]'
               }`}
             >
-              Our Doctors (Dr. Ahmad Raza & Dr. Farheen Zahra)
+              Our Doctors (Dr. Marcelo & Dra. Bruna)
             </Link>
             <Link
               href="/emergency-dentist/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`font-body text-17 ${
-                pathname === '/emergency-dentist/' ? 'text-forest font-bold' : 'text-forest font-medium'
-              }`}
+              className={`font-body text-16 font-semibold text-[#F32632] hover:underline`}
             >
-              Emergency Dentist (Urgent Care)
+              Emergency Dentist (Urgent Care 24/7)
             </Link>
             <Link
               href="/blog/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`font-body text-17 ${
-                pathname?.startsWith('/blog') ? 'text-forest font-semibold' : 'text-forest-ink hover:text-forest'
+              className={`font-body text-16 transition-colors ${
+                pathname?.startsWith('/blog') ? 'text-[#08A9DE] font-semibold' : 'text-[#111827] hover:text-[#08A9DE]'
               }`}
             >
               Clinical Journal (Blog)
@@ -282,8 +282,8 @@ export default function Navbar() {
             <Link
               href="/contact/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`font-body text-17 ${
-                pathname === '/contact/' ? 'text-forest font-semibold' : 'text-forest-ink hover:text-forest'
+              className={`font-body text-16 transition-colors ${
+                pathname === '/contact/' ? 'text-[#08A9DE] font-semibold' : 'text-[#111827] hover:text-[#08A9DE]'
               }`}
             >
               Contact & Hours
@@ -291,7 +291,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="pt-6 mt-6 border-t border-mist flex flex-col gap-3">
+        <div className="pt-6 mt-6 border-t border-[#D7E1E8] flex flex-col gap-3 pb-8">
           <Button
             href="/book-appointment/"
             variant="forest"
@@ -303,7 +303,7 @@ export default function Navbar() {
           </Button>
           <a
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
-            className="text-center font-body text-15 text-forest py-2 font-medium"
+            className="text-center font-body text-15 text-[#0A2472] py-2 font-semibold hover:text-[#08A9DE] transition-colors"
           >
             Call {CLINIC_INFO.contact.phone}
           </a>

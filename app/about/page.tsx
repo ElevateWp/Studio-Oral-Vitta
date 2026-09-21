@@ -14,51 +14,51 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About Our Practice & Surgical Team',
+  title: 'Sobre o Consultório | Dr. Marcelo de Souza Bezerra',
   description:
-    'Learn about Nova Dental: led by Dr. Ahmad Raza (BDS, RDS) and Dr. Farheen Zahra (BDS, RDS), committed to restorative precision and biological tooth preservation.',
+    'Conheça o Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus: referência em implantes de carga imediata em 1 dia, odontologia domiciliar e aparelhos ortodônticos.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: '2018',
-    title: 'Founding of Nova Dental Clinic',
-    description: 'Dr. Ahmad Raza (BDS, RDS) established Nova Dental with a core vision of micro-invasive biological dentistry and advanced restorative surgical care.',
+    year: '2012',
+    title: 'Fundação do Consultório em Manaus',
+    description: 'Dr. Marcelo de Souza Bezerra estabelece a clínica com foco em reabilitação oral, implantodontia de excelência e atendimento odontológico domiciliar.',
+  },
+  {
+    year: '2016',
+    title: 'Pioneirismo em Carga Imediata',
+    description: 'Implementação de protocolos avançados de implantes com carga imediata, permitindo a restauração do sorriso em 1 dia com alta previsibilidade.',
   },
   {
     year: '2020',
-    title: 'Addition of Microscopic Rotary Endodontics',
-    description: 'Dr. Farheen Zahra (BDS, RDS, Demonstrator in BAMDC) joined the clinical faculty, standardizing microscopic endodontic therapy and preventive protocols.',
-  },
-  {
-    year: '2022',
-    title: 'Full Digital Implantology Suite',
-    description: 'Upgraded surgical theaters with high-precision 3D CBCT volumetric imaging and guided surgical placement systems.',
+    title: 'Expansão do Atendimento Domiciliar',
+    description: 'Estruturação de consultório portátil completo para levar tratamento odontológico humanizado e com biossegurança ao lar de pacientes com dificuldades de locomoção.',
   },
   {
     year: '2024',
-    title: 'Advanced Clear Aligners & Aesthetic Center',
-    description: 'Integrated digital intraoral scanning and computer-designed orthodontic aligners for minimally invasive smile design.',
+    title: 'Excelência em Ortodontia & Estética',
+    description: 'Integração de aparelhos estéticos, alinhadores e novos protocolos de clareamento e restaurações estéticas com a Dra. Bruna.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
-    title: 'Comprehensive 3D Diagnostics',
-    description: 'We never guess. Digital volumetric CBCT tomography, microscopic imaging, and intraoral scans form the objective baseline for every treatment decision.',
+    title: 'Diagnóstico e Planejamento Preciso',
+    description: 'Avaliação clínica minuciosa com foco nas reais necessidades do paciente, oferecendo soluções ágeis e eficientes.',
   },
   {
-    title: 'Transparent Treatment Planning',
-    description: 'You receive itemized written clinical plans with full radiological explanations, clear recovery timelines, and exact fees prior to starting care.',
+    title: 'Transparência e Custo-Benefício',
+    description: 'Planos de tratamento detalhados, valores justos e acessíveis e orientações claras sobre cada etapa antes do procedimento.',
   },
   {
-    title: 'Biological Tooth Preservation',
-    description: 'We believe your natural tooth structure is irreplaceable. Every intervention aims to conserve enamel, dentin, and vital pulpal tissue.',
+    title: 'Sorriso em 1 Dia com Carga Imediata',
+    description: 'Técnicas modernas de implantes que devolvem a função mastigatória e a estética com rapidez e conforto.',
   },
   {
-    title: 'Longitudinal Follow-Up Care',
-    description: 'Our care continues long after procedure completion with standardized 6- and 12-month radiographic reviews and periodontal monitoring.',
+    title: 'Atendimento Humanizado no Consultório & Domiciliar',
+    description: 'Cuidado atencioso, seguro e acolhedor na clínica ou no conforto da sua residência em Manaus.',
   },
 ];
 
@@ -68,17 +68,17 @@ export default function AboutPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'About Us', path: '/about/' }]} />
+          <Breadcrumbs items={[{ name: 'Sobre Nós', path: '/about/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About Nova Dental
+                  Sobre o Consultório
                 </span>
-                <WordRevealH1 text="A specialist restorative clinic dedicated to quiet excellence." />
+                <WordRevealH1 text="Compromisso com seu sorriso, agilidade e excelência técnica." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Led by Dr. Ahmad Raza and Dr. Farheen Zahra, Nova Dental serves patients seeking uncompromising restorative precision, surgical implantology, and microscopic endodontics in an atmosphere of deliberate calm." />
+                  <ScrubbedParagraph text="Liderado pelo Dr. Marcelo de Souza Bezerra e Dra. Bruna, nosso consultório atende pacientes que buscam tratamentos modernos de implantes de carga imediata (recuperação do sorriso em 1 dia), aparelhos ortodônticos e atendimento em odontologia domiciliar com cuidado humanizado." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -87,20 +87,20 @@ export default function AboutPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Established</span>
+                    <span>Fundação</span>
                     <span className="font-medium text-forest">{CLINIC_INFO.establishedYear}</span>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Clinical Leadership</span>
-                    <span className="font-medium text-forest">Dr. Ahmad Raza (Owner)</span>
+                    <span>Responsável Técnico</span>
+                    <span className="font-medium text-forest">Dr. Marcelo de Souza Bezerra</span>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Academic Faculty</span>
-                    <span className="font-medium text-forest">Dr. Farheen Zahra (BAMDC)</span>
+                    <span>Especialista & Docente</span>
+                    <span className="font-medium text-forest">Dra. Bruna</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Accreditation</span>
-                    <span className="font-medium text-forest">PMDC / PDA Registered</span>
+                    <span>Registro</span>
+                    <span className="font-medium text-forest">CRO-AM</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -109,16 +109,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 2: Our Story (Vertical timeline on full-bleed --forest panel wipe) */}
+      {/* SECTION 2: Our Story */}
       <PanelWipe className="py-20 md:py-32">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-2xl mb-16">
               <span className="font-body text-13 text-paper/60 uppercase tracking-wider block mb-2 font-medium">
-                Practice Evolution
+                Trajetória da Prática
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Our clinical development
+                Nossa Evolução Clínica
               </h2>
             </div>
           </AnimateOnScroll>
@@ -154,10 +154,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Clinical Philosophy
+                Diferenciais do Consultório
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Four pillars of our patient care model
+                Quatro pilares do nosso atendimento
               </h2>
             </div>
           </AnimateOnScroll>
@@ -172,7 +172,7 @@ export default function AboutPage() {
                 <div className="p-8 border border-mist bg-paper flex flex-col justify-between h-full hover:border-forest/40 transition-colors shadow-sm">
                   <div>
                     <span className="font-body text-13 text-forest block mb-3 font-medium">
-                      Pillar 0{idx + 1}
+                      Pilar 0{idx + 1}
                     </span>
                     <h3 className="font-display text-21 md:text-26 text-forest-ink mb-3">
                       {step.title}
@@ -195,17 +195,17 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
               <div>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Medical Leadership
+                  Corpo Clínico
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Our specialist clinicians
+                  Nossos Especialistas
                 </h2>
               </div>
               <Link
                 href="/dentists/"
                 className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
               >
-                View detailed curriculum vitae →
+                Ver perfis detalhados →
               </Link>
             </div>
           </AnimateOnScroll>
@@ -225,22 +225,22 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Surgical Facilities
+                  Estrutura Clínica
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Engineered for micron-level clinical control
+                  Equipamentos modernos e ambiente acolhedor
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  Our surgical suites feature high-precision dental operating microscopes, 3D CBCT digital imaging, and medical-grade sterilization systems to guarantee uncompromised patient safety during surgical implant and endodontic procedures.
+                  Nosso consultório em Manaus conta com ambiente esterilizado e equipamentos modernos para procedimentos cirúrgicos de implantes, restaurações, canal e ortodontia com total segurança biológica.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>ISO-standard clinical air purification & laminar flow</span>
+                    <span>Protocolos rigorosos de biossegurança e esterilização</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Dedicated rotary endodontic and implant surgical suites</span>
+                    <span>Equipamentos portáteis especializados para odontologia domiciliar</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -252,14 +252,14 @@ export default function AboutPage() {
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
                       src="/images/dental-operatory.jpg"
-                      alt="Nova Dental surgical operatory and clinical suites"
+                      alt="Consultório Odontológico Dr. Marcelo de Souza Bezerra"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Surgical Operatory Suite
+                    Consultório Odontológico
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -268,68 +268,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 6: Hygiene & Patient Safety */}
-      <section className="py-20 md:py-32 border-b border-mist">
-        <div className="max-w-site mx-auto px-6 md:px-12">
-          <AnimateOnScroll animation="fade-up" duration={0.8}>
-            <div className="max-w-3xl mb-12">
-              <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Sterilization & Safety
-              </span>
-              <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Uncompromising biological infection control
-              </h2>
-              <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                Every surgical instrument undergoes multi-stage ultrasonic cleaning, vacuum thermal disinfection, and Class-B autoclave sterilization with individual biological spore test verification.
-              </p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AnimateOnScroll animation="fade-up" delay={0.1}>
-              <div className="p-6 bg-mist/30 border border-mist h-full">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">
-                  Class-B Autoclaves
-                </h3>
-                <p className="font-body text-13 text-forest-ink/70">
-                  Triple vacuum fractionated steam sterilization eliminating 100% of bacterial and viral pathogens.
-                </p>
-              </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={0.2}>
-              <div className="p-6 bg-mist/30 border border-mist h-full">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">
-                  Continuous Spore Logging
-                </h3>
-                <p className="font-body text-13 text-forest-ink/70">
-                  Third-party biological spore testing conducted weekly to audit all sterilization chambers.
-                </p>
-              </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={0.3}>
-              <div className="p-6 bg-mist/30 border border-mist h-full">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">
-                  HEPA Medical Filtration
-                </h3>
-                <p className="font-body text-13 text-forest-ink/70">
-                  Continuous 12 air changes per hour with hospital-grade filtration capturing particles down to 0.1 microns.
-                </p>
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: Clinic Gallery */}
+      {/* SECTION 6: Visual Tour */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Visual Tour
+                Ambiente Clínico
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Inside our clinical pavilion
+                Nosso Espaço em Manaus
               </h2>
             </div>
           </AnimateOnScroll>
@@ -339,13 +287,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/clinic-reception.jpg"
-                  alt="Nova Dental patient reception lounge"
+                  alt="Recepção do consultório"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Reception Lounge
+                  Recepção
                 </div>
               </div>
             </AnimateOnScroll>
@@ -353,13 +301,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/consultation-office.jpg"
-                  alt="Doctor consultation and planning office"
+                  alt="Sala de atendimento e avaliação"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Consultation Office
+                  Consultório
                 </div>
               </div>
             </AnimateOnScroll>
@@ -367,13 +315,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/clinic-exterior.jpg"
-                  alt="Nova Dental clinic entrance"
+                  alt="Entrada do consultório"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Clinic Entrance
+                  Fachada
                 </div>
               </div>
             </AnimateOnScroll>
@@ -381,29 +329,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 8: Appointment CTA */}
+      {/* SECTION 7: Appointment CTA */}
       <section className="py-20 md:py-28 bg-forest text-paper">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Next Steps
+                Agendamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your clinical evaluation
+                Agende sua avaliação com o Dr. Marcelo e Dra. Bruna
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Meet directly with Dr. Ahmad Raza and Dr. Farheen Zahra for comprehensive treatment planning.
+                Atendimento no consultório em Manaus e serviço de odontologia domiciliar com agilidade e qualidade.
               </p>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/book-appointment/" variant="lime" size="lg">
-                Book Appointment
+                Solicitar Agendamento
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
-                Contact Clinic
+                Ver Contatos
               </Button>
             </div>
           </AnimateOnScroll>

@@ -9,31 +9,31 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contact Nova Dental Multan | Bosan Rd, Opposite Mall of Multan',
+  title: 'Contato & Localização | Dr. Marcelo de Souza Bezerra - Manaus',
   description:
-    'Contact Nova Dental Clinic in Multan. Phone/WhatsApp +92 370 3301987, Bosan Road opposite Mall of Multan, Sabzazar Metro Station. Open daily till 10 PM.',
+    'Entre em contato com o Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus. WhatsApp/Telefone: +55 92 99265-6280. Av. Borba, 1438 - Cachoeirinha, Manaus - AM.',
   pathname: '/contact/',
 });
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full bg-paper">
-      {/* SECTION 1: Contact Introduction with Signature Texture 3 of 4 behind header */}
+      {/* SECTION 1: Contact Introduction */}
       <section className="relative py-16 md:py-24 border-b border-mist overflow-hidden">
         <TextureBackground variant="contact" className="opacity-30" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Contact Us', path: '/contact/' }]} />
+          <Breadcrumbs items={[{ name: 'Contato', path: '/contact/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Clinical Inquiries & Directions
+                  Atendimento & Agendamento
                 </span>
-                <WordRevealH1 text="Connect with our clinical administration." />
+                <WordRevealH1 text="Fale com nossa equipe odontológica." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Whether requesting medical records, scheduling a consultation with Dr. Ahmad Raza or Dr. Farheen Zahra, or seeking immediate trauma guidance, our team responds promptly.
+                  Agende sua avaliação de implantes de carga imediata, tire dúvidas sobre odontologia domiciliar ou aparelhos ortodônticos diretamente pelo WhatsApp com o Dr. Marcelo e a Dra. Bruna.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -50,17 +50,33 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Direct Lines
+                    Canais de Atendimento
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                    Verified communication channels
+                    Fale Conosco
                   </h2>
 
                   <div className="divide-y divide-mist border-t border-b border-mist">
+                    {/* WhatsApp */}
+                    <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-mist/30 px-4 -mx-4 rounded-sm">
+                      <div>
+                        <span className="font-body text-13 text-forest font-semibold block">WhatsApp Direto</span>
+                        <a
+                          href="https://api.whatsapp.com/send?phone=5592992656280"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-display text-21 text-forest font-bold hover:underline"
+                        >
+                          {CLINIC_INFO.contact.whatsapp}
+                        </a>
+                      </div>
+                      <span className="font-body text-13 text-forest font-medium">Mensagens & Agendamento</span>
+                    </div>
+
                     {/* Phone */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">Main Telephone Desk</span>
+                        <span className="font-body text-13 text-forest-ink/60 block">Telefone Principal</span>
                         <a
                           href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                           className="font-display text-21 text-forest hover:underline"
@@ -68,51 +84,32 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Mon – Fri (08:00 – 17:30)</span>
+                      <span className="font-body text-13 text-forest-ink/60">Seg – Sex (08:00 – 18:00)</span>
                     </div>
 
-                    {/* Emergency Line */}
-                    <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-mist/30 px-4 -mx-4 rounded-sm">
-                      <div>
-                        <span className="font-body text-13 text-forest font-semibold block">24/7 Acute Emergency Line</span>
-                        <a
-                          href={`tel:${CLINIC_INFO.contact.emergencyPhone.replace(/[^0-9+]/g, '')}`}
-                          className="font-display text-21 text-forest font-bold hover:underline"
-                        >
-                          {CLINIC_INFO.contact.emergencyPhone}
-                        </a>
-                      </div>
-                      <span className="font-body text-13 text-forest font-medium">On-Call Doctor</span>
-                    </div>
-
-                    {/* WhatsApp */}
+                    {/* Domiciliary Care Info */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">Direct Clinical WhatsApp</span>
-                        <a
-                          href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-display text-21 text-forest hover:underline"
-                        >
-                          {CLINIC_INFO.contact.whatsapp}
-                        </a>
+                        <span className="font-body text-13 text-forest-ink/60 block">Odontologia Domiciliar</span>
+                        <span className="font-display text-18 text-forest-ink">
+                          Manaus e Região Metropolitana
+                        </span>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Messaging & Triage</span>
+                      <span className="font-body text-13 text-forest-ink/60">Sob Agendamento</span>
                     </div>
 
                     {/* Email */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">Confidential Email</span>
+                        <span className="font-body text-13 text-forest-ink/60 block">E-mail</span>
                         <a
                           href={`mailto:${CLINIC_INFO.contact.email}`}
-                          className="font-display text-21 text-forest hover:underline"
+                          className="font-display text-18 text-forest hover:underline"
                         >
                           {CLINIC_INFO.contact.email}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">HIPAA Encrypted</span>
+                      <span className="font-body text-13 text-forest-ink/60">Atendimento Clínico</span>
                     </div>
                   </div>
                 </div>
@@ -122,20 +119,18 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Physical Practice
+                    Endereço do Consultório
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    {CLINIC_INFO.name} — Multan
+                    {CLINIC_INFO.name}
                   </h3>
                   <address className="not-italic font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
-                    {CLINIC_INFO.primaryLocation.street}
+                    {CLINIC_INFO.primaryLocation.street} - {CLINIC_INFO.primaryLocation.suite}
                     <br />
-                    {CLINIC_INFO.primaryLocation.suite}
-                    <br />
-                    {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.state} {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
+                    {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    <strong>Landmarks & Transit:</strong> {CLINIC_INFO.primaryLocation.directions} {CLINIC_INFO.primaryLocation.landmarks}
+                    <strong>Ponto de Referência & Plus Code:</strong> {CLINIC_INFO.primaryLocation.directions} Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas, Brazil.
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -146,7 +141,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Operating Hours
+                    Horário de Funcionamento
                   </span>
                   <div className="border border-mist divide-y divide-mist bg-paper font-body text-13 shadow-sm">
                     {CLINIC_INFO.schedule.map((item) => (
@@ -164,32 +159,37 @@ export default function ContactPage() {
                 <div className="p-8 bg-forest text-paper flex flex-col justify-between aspect-[16/10] shadow-sm">
                   <div>
                     <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-                      Google Maps Location & Plus Code
+                      Localização no Google Maps & Plus Code
                     </span>
                     <h3 className="font-display text-26 text-paper mb-2">
-                      Opposite Mall of Multan, Bosan Rd
+                      Av. Borba, 1438 - Cachoeirinha
                     </h3>
                     <p className="font-body text-13 text-paper/80 leading-relaxed">
-                      Sabzazar Metro Station, Gulgasht Colony, Multan, Pakistan. Plus Code: 6FMJ+FM Multan.
+                      Manaus - Amazonas, CEP 69065-030, Brasil. Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas.
                     </p>
                     <div className="mt-3 inline-flex items-center gap-2 bg-paper/10 px-3 py-1 text-lime font-body text-13">
-                      <span>★ 5.0 Rating (28 Google Reviews)</span>
+                      <span>★ 4.7 Avaliação (59 Avaliações no Google)</span>
                     </div>
                   </div>
 
                   <div className="pt-6 border-t border-mist/20 flex flex-wrap items-center justify-between gap-4">
                     <Button
                       href={`https://maps.google.com/?q=${encodeURIComponent(
-                        `Nova Dental Bosan Rd near sabzazar metrostation opposite mall of Gulgasht Colony Multan`
+                        `Av. Borba, 1438 - Cachoeirinha, Manaus - AM, 69065-030, Brazil`
                       )}`}
                       variant="lime"
                       size="sm"
                     >
-                      Open Google Maps
+                      Abrir no Google Maps
                     </Button>
-                    <span className="font-body text-13 text-paper/60">
-                      Plus Code: 6FMJ+FM Multan
-                    </span>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=5592992656280"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-body text-13 text-lime hover:underline font-semibold"
+                    >
+                      WhatsApp: +55 92 99265-6280
+                    </a>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -204,16 +204,16 @@ export default function ContactPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Begin Treatment
+                Agendamento de Consulta
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Ready to schedule your appointment?
+                Pronto para agendar sua avaliação?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Request Appointment Online
+              Solicitar Agendamento Online
             </Button>
           </AnimateOnScroll>
         </div>

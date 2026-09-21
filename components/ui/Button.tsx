@@ -4,7 +4,7 @@ import Link from 'next/link';
 interface ButtonProps {
   children: React.ReactNode;
   href?: string;
-  variant?: 'forest' | 'ghost' | 'lime';
+  variant?: 'forest' | 'ghost' | 'lime' | 'red' | 'navy';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
@@ -25,7 +25,7 @@ export default function Button({
   ariaLabel,
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center font-body rounded-pill transition-all duration-250 cursor-pointer select-none no-underline';
+    'inline-flex items-center justify-center font-body rounded-pill transition-all duration-250 cursor-pointer select-none no-underline font-medium';
 
   const sizeStyles = {
     sm: 'text-13 px-4 py-2 gap-2 min-h-[36px]',
@@ -35,11 +35,15 @@ export default function Button({
 
   const variantStyles = {
     forest:
-      'bg-forest text-paper hover:bg-forest-light active:bg-forest-ink shadow-none',
+      'bg-[#08A9DE] text-white hover:bg-[#0496C7] active:bg-[#0A2472] shadow-sm',
     ghost:
-      'bg-transparent text-forest-ink border border-forest-ink/20 hover:border-forest-ink hover:bg-forest-ink/5',
+      'bg-transparent text-[#111827] border border-[#D7E1E8] hover:border-[#08A9DE] hover:text-[#08A9DE] hover:bg-[#D9F3FC]/40',
     lime:
-      'bg-lime text-forest-ink font-medium hover:brightness-105 active:brightness-95',
+      'bg-[#08A9DE] text-white hover:bg-[#0496C7] active:bg-[#0A2472] shadow-sm',
+    red:
+      'bg-[#F32632] text-white hover:bg-[#d91d28] active:bg-[#b5141f] shadow-sm',
+    navy:
+      'bg-[#0A2472] text-white hover:bg-[#08A9DE] active:bg-[#0496C7] shadow-sm',
   };
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${

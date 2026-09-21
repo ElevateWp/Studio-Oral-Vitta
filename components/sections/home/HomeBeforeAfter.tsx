@@ -42,7 +42,7 @@ export default function HomeBeforeAfter() {
               afterImage="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1200"
               beforeLabel="Pre-operative: Fractured & Discolored Enamel"
               afterLabel="Post-operative: Micro-Layered Porcelain Veneers"
-              clinicalNote="Case: 8 Anterior Feldspathic Ceramic Veneers by Dr. Ahmad Raza (Owner). Treatment duration: 2 clinical visits."
+              clinicalNote="Caso: Reabilitação estética e facetas cerâmicas pelo Dr. Marcelo de Souza Bezerra."
             />
           </AnimateOnScroll>
         </div>

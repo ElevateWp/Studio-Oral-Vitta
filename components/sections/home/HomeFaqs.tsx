@@ -3,32 +3,33 @@ import Accordion, { AccordionItem } from '@/components/ui/Accordion';
 import JsonLd from '@/components/ui/JsonLd';
 import { generateFaqSchema } from '@/lib/seo';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
+import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'How often should I visit Nova Dental for routine care?',
-    answer: 'For patients with healthy teeth and stable periodontal architecture, an examination and guided airflow cleaning every 6 months is recommended. Dr. Ahmad Raza and Dr. Farheen Zahra provide comprehensive oral examinations to keep your teeth healthy.',
-    relatedLink: { href: '/dental-cleaning/', label: 'View our Dental Cleaning & Hygiene protocol →' },
+    question: 'Como funciona o implante de carga imediata para ter o sorriso em 1 dia?',
+    answer: 'A técnica de carga imediata permite a fixação do implante e a colocação do dente no mesmo dia ou em até 24 a 48 horas quando há estabilidade óssea adequada, permitindo ao paciente voltar a sorrir rapidamente.',
+    relatedLink: { href: '/dental-implants/', label: 'Ver detalhes sobre Implantes e Carga Imediata →' },
   },
   {
-    question: 'Is dental implant surgery painful during or after the procedure?',
-    answer: 'No. Under profound local anesthesia, you feel only mild pressure. Dr. Ahmad Raza plans every implant in 3D for minimally invasive placement with quick, comfortable recovery.',
-    relatedLink: { href: '/dental-implants/', label: 'Read our Dental Implants procedure walkthrough →' },
+    question: 'O consultório realiza atendimento de odontologia domiciliar em Manaus?',
+    answer: 'Sim! O Dr. Marcelo de Souza Bezerra oferece atendimento domiciliar especializado para pacientes idosos, acamados ou com dificuldades de locomoção, com equipamentos portáteis modernos.',
+    relatedLink: { href: '/contact/', label: 'Solicitar Atendimento Domiciliar →' },
   },
   {
-    question: 'How does single-visit root canal treatment relieve tooth pain?',
-    answer: 'Dr. Farheen Zahra (BAMDC Demonstrator) uses rotary instrumentation and ultrasonic irrigation to clean and sterilize infected root canals painlessly in a single 60- to 80-minute visit.',
-    relatedLink: { href: '/root-canal/', label: 'Explore Endodontics →' },
+    question: 'Quais tipos de aparelhos ortodônticos são oferecidos?',
+    answer: 'Trabalhamos com aparelhos metálicos convencionais, estéticos (cerâmica e safira) e alinhadores transparentes, planejados minuciosamente pela nossa equipe.',
+    relatedLink: { href: '/braces/', label: 'Explorar Aparelhos Ortodônticos →' },
   },
   {
-    question: 'How long do professional teeth whitening results last?',
-    answer: 'In-chair medical whitening typically lasts 12 to 24 months. Using custom-fitted maintenance trays once every 6 to 12 months maintains peak shade stability.',
-    relatedLink: { href: '/teeth-whitening/', label: 'Learn about Prescription Teeth Whitening →' },
+    question: 'Como agendar uma avaliação no consultório?',
+    answer: `Você pode entrar em contato diretamente pelo WhatsApp (${CLINIC_INFO.contact.phone}) ou preencher o formulário de agendamento online com antecedência.`,
+    relatedLink: { href: '/book-appointment/', label: 'Agendar Consulta Online →' },
   },
   {
-    question: 'What should I do in an acute dental emergency?',
-    answer: 'Call our direct emergency line at +1 (415) 890-4129 immediately for same-day pain relief, trauma splinting, or abscess management.',
-    relatedLink: { href: '/emergency-dentist/', label: 'Access Emergency Triage Protocol →' },
+    question: 'Onde fica localizado o consultório em Manaus?',
+    answer: 'Estamos localizados na Av. Borba, 1438 - Cachoeirinha, Manaus - AM, 69065-030 (Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas, Brazil).',
+    relatedLink: { href: '/contact/', label: 'Ver Mapa e Rotas no Google Maps →' },
   },
 ];
 
@@ -40,26 +41,28 @@ export default function HomeFaqs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <AnimateOnScroll animation="fade-right" duration={0.85} className="lg:col-span-5">
             <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Patient Inquiries
+              Dúvidas Frequentes
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Frequently asked clinical questions
+              Perguntas frequentes sobre nossos tratamentos
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Clear answers regarding clinical safety, procedure timelines, recovery expectations, and treatment indications.
+              Respostas claras sobre implantes de carga imediata, odontologia domiciliar, aparelhos ortodônticos e atendimento em Manaus.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
-                Have an unlisted question?
+                Tem alguma outra pergunta?
               </span>
               <p className="font-body text-13 text-forest-ink/70 mb-3">
-                Our surgical coordinators provide direct answers prior to any consultation.
+                Fale diretamente conosco pelo WhatsApp e tire todas as suas dúvidas.
               </p>
               <a
-                href="/contact/"
+                href={`https://api.whatsapp.com/send?phone=5592992656280`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"
               >
-                Contact our clinical desk
+                Falar pelo WhatsApp
               </a>
             </div>
           </AnimateOnScroll>

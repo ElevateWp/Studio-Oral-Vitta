@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { DENTISTS, SERVICES } from '@/lib/clinic-data';
+import { DENTISTS, SERVICES, CLINIC_INFO } from '@/lib/clinic-data';
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import Button from '@/components/ui/Button';
 import WordRevealH1 from '@/components/motion/WordRevealH1';
@@ -49,7 +49,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
     image: dentist.image,
     worksFor: {
       '@type': 'Dentist',
-      name: 'Nova Dental Clinic',
+      name: CLINIC_INFO.name,
     },
     alumniOf: dentist.education.map((e) => ({
       '@type': 'EducationalOrganization',
@@ -67,7 +67,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Our Dentists', path: '/dentists/' },
+              { name: 'Nossos Dentistas', path: '/dentists/' },
               { name: dentist.name, path: `/dentists/${dentist.slug}/` },
             ]}
           />
@@ -79,7 +79,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src={dentist.image}
-                    alt={`Clinical portrait of ${dentist.name}`}
+                    alt={`Retrato de ${dentist.name}`}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 40vw"
@@ -87,8 +87,8 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   />
                 </div>
                 <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
-                  <span>Clinical Practice:</span>
-                  <span className="font-medium text-forest">{dentist.experienceYears}+ Years Experience</span>
+                  <span>Prática Clínica:</span>
+                  <span className="font-medium text-forest">{dentist.experienceYears}+ Anos de Experiência</span>
                 </div>
               </AnimateOnScroll>
             </div>
@@ -108,7 +108,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="p-6 bg-mist/30 border-l-2 border-forest mb-8 shadow-sm">
                   <span className="font-body text-13 text-forest font-medium uppercase tracking-wider block mb-2">
-                    Clinical Philosophy
+                    Filosofia de Atendimento
                   </span>
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed italic">
                     “{dentist.philosophy}”
@@ -117,10 +117,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="flex flex-wrap items-center gap-4">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Request consultation with {dentist.name.split(' ')[1]}
+                    Agendar consulta com {dentist.name}
                   </Button>
                   <Button href="/dentists/" variant="ghost" size="lg">
-                    View All Clinicians
+                    Ver Todos os Profissionais
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -136,7 +136,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  Education & Specialty Training
+                  Formação & Especializações
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.education.map((edu, idx) => (
@@ -152,7 +152,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                  Professional Memberships & Fellowships
+                  Associações & Registros
                 </h2>
                 <ul className="space-y-4 font-body text-15 text-forest-ink/80">
                   {dentist.memberships.map((mem, idx) => (
@@ -168,24 +168,27 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         </div>
       </section>
 
-      {/* Primary Associated Treatments */}
+      {/* Assigned Clinical Disciplines */}
       {relatedServices.length > 0 && (
         <section className="py-20 md:py-32 border-b border-mist">
           <div className="max-w-site mx-auto px-6 md:px-12">
             <AnimateOnScroll animation="fade-up" duration={0.8}>
-              <h2 className="font-display text-26 md:text-33 text-forest-ink mb-8">
-                Clinical Procedures Directed by {dentist.name}
-              </h2>
+              <div className="mb-12">
+                <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
+                  Áreas de Atuação
+                </span>
+                <h2 className="font-display text-33 md:text-41 text-forest-ink">
+                  Tratamentos realizados por {dentist.name}
+                </h2>
+              </div>
             </AnimateOnScroll>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {relatedServices.map((service, sIdx) => (
-                <AnimateOnScroll key={service.slug} animation="fade-up" delay={sIdx * 0.1}>
-                  <div className="p-8 border border-mist bg-paper flex flex-col justify-between h-full hover:border-forest/40 transition-colors shadow-sm">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedServices.map((service) => (
+                <AnimateOnScroll key={service.slug} animation="fade-up">
+                  <div className="p-8 bg-paper border border-mist flex flex-col justify-between h-full shadow-sm hover:border-forest/50 transition-colors">
                     <div>
-                      <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">
-                        Specialized Discipline
-                      </span>
-                      <h3 className="font-display text-26 text-forest-ink mb-3">
+                      <h3 className="font-display text-21 text-forest-ink mb-3">
                         {service.name}
                       </h3>
                       <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
@@ -194,9 +197,9 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                     </div>
                     <Link
                       href={`/${service.slug}/`}
-                      className="font-body text-15 text-forest font-medium underline underline-offset-4"
+                      className="font-body text-13 text-forest font-medium hover:underline inline-flex items-center gap-1"
                     >
-                      View complete treatment protocol →
+                      Ver protocolo do procedimento →
                     </Link>
                   </div>
                 </AnimateOnScroll>
@@ -205,6 +208,27 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
           </div>
         </section>
       )}
+
+      {/* Direct Scheduling CTA */}
+      <section className="py-20 md:py-28 bg-forest text-paper">
+        <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <AnimateOnScroll animation="fade-right" duration={0.8}>
+            <div>
+              <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
+                Agendamento Direto
+              </span>
+              <h2 className="font-display text-33 md:text-41 text-paper">
+                Deseja agendar sua consulta com {dentist.name}?
+              </h2>
+            </div>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
+            <Button href="/book-appointment/" variant="lime" size="lg">
+              Agendar Avaliação
+            </Button>
+          </AnimateOnScroll>
+        </div>
+      </section>
     </div>
   );
 }

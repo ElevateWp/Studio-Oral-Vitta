@@ -121,7 +121,7 @@ export default function HomeHero() {
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-forest-ink text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#111827] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <span
@@ -144,7 +144,7 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              Led by Dr. Ahmad Raza (Owner) & Dr. Farheen Zahra (BAMDC Demonstrator), we provide specialist-led surgical implantology, microscopic endodontics, clear aligners, and aesthetic restorations designed for physical comfort and biological longevity.
+              Liderado pelo <strong className="font-semibold text-forest-ink">Dr. Marcelo de Souza Bezerra</strong> e pela <strong className="font-semibold text-forest-ink">Dra. Bruna</strong>, oferecemos implantes de carga imediata que podem trazer seu sorriso em 1 dia, atendimento em odontologia domiciliar e aparelhos ortodônticos com excelência e conforto.
             </p>
 
             <div
@@ -152,27 +152,27 @@ export default function HomeHero() {
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
               <Button href="/book-appointment/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Book consultation
+                Agendar Consulta
               </Button>
               <Button
-                href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
+                href={`https://api.whatsapp.com/send?phone=5592992656280`}
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto font-medium"
               >
-                Call {CLINIC_INFO.contact.phone}
+                WhatsApp {CLINIC_INFO.contact.phone}
               </Button>
             </div>
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-forest-ink/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#111827]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-forest-ink">{CLINIC_INFO.primaryLocation.street}</span>
+              <span className="font-medium text-[#0A2472]">{CLINIC_INFO.primaryLocation.street}</span>
               <span className="hidden sm:inline">•</span>
               <span>{CLINIC_INFO.primaryLocation.suite}, {CLINIC_INFO.primaryLocation.city}</span>
               <span className="hidden sm:inline">•</span>
-              <span className="text-amber-700 font-semibold">★ 5.0 (28 Google Reviews)</span>
+              <span className="text-[#08A9DE] font-semibold">★ 4.7 (59 Avaliações Google)</span>
             </div>
           </div>
 
@@ -181,16 +181,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-paper/90 backdrop-blur-sm border border-mist shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-forest uppercase tracking-wider font-semibold">
-                Clinical Leadership
+            <div className="p-6 sm:p-8 bg-[#F4F7FA] border border-[#D7E1E8] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#08A9DE] uppercase tracking-wider font-semibold">
+                Destaques Clínicos
               </span>
-              <p className="font-body text-13 sm:text-15 text-forest-ink/90 leading-relaxed">
-                Led by <strong className="text-forest-ink font-semibold">Dr. Ahmad Raza</strong> (BDS, RDS, Owner & Principal Surgeon) and <strong className="text-forest-ink font-semibold">Dr. Farheen Zahra</strong> (BDS, RDS, Demonstrator in BAMDC), practicing under microscopic magnification and 3D CBCT guided protocols.
+              <p className="font-body text-13 sm:text-15 text-[#111827]/90 leading-relaxed">
+                <strong className="text-[#0A2472] font-semibold">&ldquo;Implantes carga imediata pode trazer seu sorriso em 1 dia&rdquo;</strong> &mdash; Atendimento humanizado com <strong className="text-[#0A2472] font-semibold">Dr. Marcelo de Souza Bezerra</strong> e <strong className="text-[#0A2472] font-semibold">Dra. Bruna</strong> no consultório e em odontologia domiciliar.
               </p>
-              <div className="pt-3 border-t border-mist flex items-center justify-between text-13 font-body text-forest-ink/70">
-                <span>Direct Surgical Suites</span>
-                <span className="text-forest font-semibold">PMDC / BAMDC Verified</span>
+              <div className="pt-3 border-t border-[#D7E1E8] flex items-center justify-between text-13 font-body text-[#111827]/70">
+                <span>Manaus - AM</span>
+                <span className="text-[#08A9DE] font-semibold">CRO-AM Verificado</span>
               </div>
             </div>
           </div>
