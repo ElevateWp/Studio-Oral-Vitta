@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Dr. Marcelo de Souza Bezerra',
+      name: author?.name || 'Dental Studio Doctor',
     },
     publisher: {
       '@type': 'Organization',

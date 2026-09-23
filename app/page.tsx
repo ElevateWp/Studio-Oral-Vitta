@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Consultório Odontológico Dr. Marcelo de Souza Bezerra | Manaus - AM',
+  title: 'Dental Studio | Clínica Odontológica em Manaus - AM',
   description:
-    'Consultório Odontológico Dr. Marcelo de Souza Bezerra (4.7 ★ no Google Maps). Implantes de carga imediata para trazer seu sorriso em 1 dia, odontologia domiciliar e aparelhos ortodônticos em Manaus.',
+    'Dental Studio (5.0 ★ no Google Maps). Clínica odontológica especializada no Carvalho Center, Parque Dez de Novembro em Manaus. Implantes, ortodontia e estética dental.',
   pathname: '/',
 });
 

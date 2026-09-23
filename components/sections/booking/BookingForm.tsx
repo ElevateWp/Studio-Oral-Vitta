@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-red-700 transition-all duration-200">
+          <span className="font-body text-13 text-[#666666] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -187,7 +187,7 @@ export default function BookingForm() {
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-red-700">{errors.phone}</span>
+            <span className="font-body text-13 text-[#666666]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-red-700">{errors.email}</span>
+            <span className="font-body text-13 text-[#666666]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -222,7 +222,7 @@ export default function BookingForm() {
           id="service"
           value={formData.service}
           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-          className="w-full px-4 py-3 text-15 focus:border-forest transition-colors bg-white cursor-pointer"
+          className="w-full px-4 py-3 text-15 focus:border-forest transition-colors bg-paper cursor-pointer"
         >
           {SERVICES.map((s) => (
             <option key={s.slug} value={s.slug}>
@@ -253,7 +253,7 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-red-700">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#666666]">{errors.preferredDate}</span>
           )}
         </div>
 
@@ -265,7 +265,7 @@ export default function BookingForm() {
             id="preferredTime"
             value={formData.preferredTime}
             onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-            className="w-full px-4 py-3 text-15 focus:border-forest transition-colors bg-white cursor-pointer"
+            className="w-full px-4 py-3 text-15 focus:border-forest transition-colors bg-paper cursor-pointer"
           >
             <option value="Morning (08:00 – 12:00)">Morning (08:00 – 12:00)</option>
             <option value="Afternoon (12:00 – 16:00)">Afternoon (12:00 – 16:00)</option>

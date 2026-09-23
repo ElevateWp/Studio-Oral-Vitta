@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'cosmetic-dentistry')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Odontologia Estética & Facetas em Manaus | Dr. Marcelo de Souza Bezerra',
+  title: 'Odontologia Estética & Facetas em Manaus | Dental Studio Doctor',
   description:
-    'Lentes de contato dental, facetas cerâmicas e estética do sorriso pelo Dr. Marcelo de Souza Bezerra em Manaus.',
+    'Lentes de contato dental, facetas cerâmicas e estética do sorriso pelo Dental Studio Doctor em Manaus.',
   pathname: '/cosmetic-dentistry/',
 });
 

@@ -38,9 +38,11 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
             {dentist.qualifications}
           </div>
 
-          <div className="absolute bottom-3 right-3 bg-forest text-paper font-body text-13 px-2.5 py-0.5">
-            {dentist.experienceYears}+ Yrs Experience
-          </div>
+          {dentist.experienceYears > 0 && (
+            <div className="absolute bottom-3 right-3 bg-forest text-paper font-body text-13 px-2.5 py-0.5">
+              {dentist.experienceYears}+ Yrs Experience
+            </div>
+          )}
         </div>
 
         {/* Typography block placed strictly below image */}

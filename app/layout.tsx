@@ -8,24 +8,23 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://drmarcelosouzabezerra.com.br'),
+  metadataBase: new URL('https://dentalstudiomanaus.com.br'),
   title: {
-    default: 'Consultório Odontológico Dr. Marcelo de Souza Bezerra | Manaus',
-    template: '%s | Dr. Marcelo de Souza Bezerra',
+    default: 'Dental Studio | Clínica Odontológica em Manaus',
+    template: '%s | Dental Studio',
   },
   description:
-    'Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus. Especialistas em implantes dentários com técnica de carga imediata para recuperar seu sorriso em 1 dia, odontologia domiciliar e aparelhos ortodônticos.',
+    'Dental Studio - Clínica Odontológica em Manaus, localizada no Carvalho Center, Parque Dez de Novembro. Implantes dentários, ortodontia, clínica geral e estética dental com atendimento acolhedor.',
   keywords: [
-    'Dr Marcelo de Souza Bezerra',
-    'Dra Bruna',
-    'Consultório Odontológico Manaus',
-    'Implantes Carga Imediata Manaus',
-    'Sorriso em 1 Dia',
-    'Odontologia Domiciliar Manaus',
-    'Aparelhos Ortodonticos Manaus',
-    'Dentista Cachoeirinha Manaus',
+    'Dental Studio',
+    'Dental Studio Manaus',
+    'Clínica Odontológica Manaus',
+    'Dentista Parque Dez de Novembro',
+    'Carvalho Center Manaus',
+    'Implantes Dentários Manaus',
+    'Aparelhos Ortodônticos Manaus',
   ],
-  authors: [{ name: 'Dr. Marcelo de Souza Bezerra & Dra. Bruna' }],
+  authors: [{ name: 'Dental Studio' }],
   icons: {
     icon: [
       { url: '/images/logo.png', sizes: '32x32', type: 'image/png' },
@@ -51,7 +50,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#D9F3FC] selection:text-[#0A2472]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#E8E8E6] selection:text-[#111111]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

@@ -13,7 +13,7 @@ const HOME_FAQS: AccordionItem[] = [
   },
   {
     question: 'O consultório realiza atendimento de odontologia domiciliar em Manaus?',
-    answer: 'Sim! O Dr. Marcelo de Souza Bezerra oferece atendimento domiciliar especializado para pacientes idosos, acamados ou com dificuldades de locomoção, com equipamentos portáteis modernos.',
+    answer: 'Sim! O Dental Studio Doctor oferece atendimento domiciliar especializado para pacientes idosos, acamados ou com dificuldades de locomoção, com equipamentos portáteis modernos.',
     relatedLink: { href: '/contact/', label: 'Solicitar Atendimento Domiciliar →' },
   },
   {
@@ -27,8 +27,8 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/book-appointment/', label: 'Agendar Consulta Online →' },
   },
   {
-    question: 'Onde fica localizado o consultório em Manaus?',
-    answer: 'Estamos localizados na Av. Borba, 1438 - Cachoeirinha, Manaus - AM, 69065-030 (Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas, Brazil).',
+    question: 'Onde fica localizada a Dental Studio em Manaus?',
+    answer: 'Estamos localizados no Carvalho Center — Av. Gabriel Corrêa Pedrosa, 180 - Parque Dez de Novembro, Manaus - AM, 69055-011 (Plus Code: WX7M+77 Parque Dez de Novembro, Manaus - Amazonas, Brazil).',
     relatedLink: { href: '/contact/', label: 'Ver Mapa e Rotas no Google Maps →' },
   },
 ];
@@ -47,7 +47,7 @@ export default function HomeFaqs() {
               Perguntas frequentes sobre nossos tratamentos
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Respostas claras sobre implantes de carga imediata, odontologia domiciliar, aparelhos ortodônticos e atendimento em Manaus.
+              Respostas claras sobre implantes de carga imediata, aparelhos ortodônticos e atendimento odontológico na Dental Studio em Manaus.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Fale diretamente conosco pelo WhatsApp e tire todas as suas dúvidas.
               </p>
               <a
-                href={`https://api.whatsapp.com/send?phone=5592992656280`}
+                href={`https://api.whatsapp.com/send?phone=5592984798868`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

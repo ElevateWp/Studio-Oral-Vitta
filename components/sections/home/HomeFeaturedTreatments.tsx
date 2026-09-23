@@ -8,10 +8,10 @@ export default function HomeFeaturedTreatments() {
     <section className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#0A2472] block mb-2 font-medium uppercase tracking-wider">
+          <span className="font-body text-13 text-[#111111] block mb-2 font-medium uppercase tracking-wider">
             Casos em Destaque
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#111827]">
+          <h2 className="font-display text-33 md:text-41 text-[#111111]">
             Tratamentos e reconstruções clínicas
           </h2>
         </AnimateOnScroll>
@@ -20,18 +20,18 @@ export default function HomeFeaturedTreatments() {
           {/* Featured Case 1: Guided Dental Implantology & Immediate Load */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6 order-2 lg:order-1">
-              <span className="font-body text-13 text-[#08A9DE] uppercase tracking-wider block mb-2 font-medium">
-                Dr. Marcelo de Souza Bezerra • Implantes & Carga Imediata
+              <span className="font-body text-13 text-[#111111] uppercase tracking-wider block mb-2 font-medium">
+                Dental Studio Doctor • Implantes & Carga Imediata
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#111827] mb-4">
+              <h3 className="font-display text-26 md:text-33 text-[#111111] mb-4">
                 Implantes Carga Imediata: Seu Sorriso Recuperado em 1 Dia
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#111827]/80 leading-relaxed mb-6">
-                Com a técnica de carga imediata, o Dr. Marcelo de Souza Bezerra restabelece dentes perdidos e a segurança do sorriso em apenas 1 dia, proporcionando agilidade, estética e recuperação rápida.
+              <p className="font-body text-15 md:text-17 text-[#111111]/80 leading-relaxed mb-6">
+                Com a técnica de carga imediata, o Dental Studio Doctor restabelece dentes perdidos e a segurança do sorriso em apenas 1 dia, proporcionando agilidade, estética e recuperação rápida.
               </p>
-              <div className="p-4 bg-[#D9F3FC] border-l-4 border-[#08A9DE] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#111827]/80">
-                  <strong className="text-[#08A9DE] font-semibold">Destaque:</strong> Recuperação rápida da função mastigatória e autoestima sem esperas prolongadas.
+              <div className="p-4 bg-[#E8E8E6] border-l-4 border-[#111111] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#111111]/80">
+                  <strong className="text-[#111111] font-semibold">Destaque:</strong> Recuperação rápida da função mastigatória e autoestima sem esperas prolongadas.
                 </span>
               </div>
               <Button href="/dental-implants/" variant="ghost" size="md">
@@ -42,8 +42,8 @@ export default function HomeFeaturedTreatments() {
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6 order-1 lg:order-2">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/dr-marcelo.png"
-                  alt="Dr. Marcelo de Souza Bezerra — Especialista em Implantes"
+                  src="/images/dental-studio-doctor.png"
+                  alt="Dental Studio Doctor"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-top"
@@ -57,8 +57,8 @@ export default function HomeFeaturedTreatments() {
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/interior-operatory.png"
-                  alt="Sala de tratamento odontológico — Consultório Dr. Marcelo"
+                  src="/images/clinic-consultation-room.jpg"
+                  alt="Interior da clínica odontológica Dental Studio"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -67,18 +67,18 @@ export default function HomeFeaturedTreatments() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6">
-              <span className="font-body text-13 text-[#08A9DE] uppercase tracking-wider block mb-2 font-medium">
-                Dra. Bruna • Ortodontia & Especialidades
+              <span className="font-body text-13 text-[#111111] uppercase tracking-wider block mb-2 font-medium">
+                Dental Studio Doctor • Ortodontia & Especialidades
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#111827] mb-4">
+              <h3 className="font-display text-26 md:text-33 text-[#111111] mb-4">
                 Aparelhos Ortodônticos e Cuidado Minucioso
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#111827]/80 leading-relaxed mb-6">
-                Planejamento ortodôntico de precisão e tratamentos restauradores conduzidos com extrema atenção e competência pela Dra. Bruna, garantindo alinhamento e saúde bucal completa.
+              <p className="font-body text-15 md:text-17 text-[#111111]/80 leading-relaxed mb-6">
+                Planejamento ortodôntico de precisão e tratamentos restauradores conduzidos com extrema atenção e competência pela Dental Studio Doctor, garantindo alinhamento e saúde bucal completa.
               </p>
-              <div className="p-4 bg-[#D9F3FC] border-l-4 border-[#08A9DE] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#111827]/80">
-                  <strong className="text-[#08A9DE] font-semibold">Resultado:</strong> Harmonia do sorriso, mordida equilibrada e atendimento acolhedor.
+              <div className="p-4 bg-[#E8E8E6] border-l-4 border-[#111111] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#111111]/80">
+                  <strong className="text-[#111111] font-semibold">Resultado:</strong> Harmonia do sorriso, mordida equilibrada e atendimento acolhedor.
                 </span>
               </div>
               <Button href="/braces/" variant="ghost" size="md">

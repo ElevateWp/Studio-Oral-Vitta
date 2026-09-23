@@ -11,10 +11,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-mist/20">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-5">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="Dr. Marcelo de Souza Bezerra"
+                  alt="Dental Studio Logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,22 +22,22 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  Dr. Marcelo de Souza Bezerra
+                  Dental Studio
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Implantes • Odontologia Domiciliar • Aparelhos Ortodônticos
+                  Clínica Odontológica • Carvalho Center, Parque Dez de Novembro
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Consultório Odontológico liderado pelo Dr. Marcelo de Souza Bezerra e Dra. Bruna. Especialistas em implantes dentários com técnica de carga imediata para recuperar seu sorriso em 1 dia, odontologia domiciliar humanizada e aparelhos ortodônticos em Manaus.
+              Clínica odontológica de referência em Manaus, localizada no Carvalho Center, Parque Dez de Novembro. Tratamentos odontológicos modernos, implantes, ortodontia e atendimento acolhedor com excelência técnica.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
               <span>CRO-AM Registrado</span>
               <span>•</span>
-              <span>Carga Imediata em 1 Dia</span>
+              <span>Carvalho Center</span>
               <span>•</span>
-              <span>Odontologia Domiciliar & Consultório</span>
+              <span>Parque Dez de Novembro</span>
             </div>
           </div>
 
@@ -47,11 +47,11 @@ export default function Footer() {
                 Atendimento Rápido & WhatsApp
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Precisa agendar uma avaliação, tirar dúvidas sobre carga imediata ou solicitar atendimento domiciliar?
+                Precisa agendar uma avaliação, tirar dúvidas ou solicitar atendimento odontológico?
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5592992656280`}
+                  href={`https://api.whatsapp.com/send?phone=5592984798868`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-15 font-semibold text-lime hover:underline"
@@ -93,7 +93,7 @@ export default function Footer() {
           {/* Column 2: Clinical Team */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Profissionais
+              Profissional
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
@@ -157,7 +157,7 @@ export default function Footer() {
               <div>
                 <span className="text-paper/50 block text-13">Telefone & WhatsApp:</span>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5592992656280`}
+                  href={`https://api.whatsapp.com/send?phone=5592984798868`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-lime transition-colors font-medium"
@@ -170,12 +170,12 @@ export default function Footer() {
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
                   {CLINIC_INFO.primaryLocation.street} - {CLINIC_INFO.primaryLocation.suite}
                   <br />
-                  {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, Brasil
+                  {CLINIC_INFO.primaryLocation.directions}
                 </address>
               </div>
               <div>
                 <span className="text-paper/50 block text-13">Plus Code:</span>
-                <span className="text-13 text-paper/70">VXHW+46 Cachoeirinha, Manaus - Amazonas, Brazil</span>
+                <span className="text-13 text-paper/70">WX7M+77 Parque Dez de Novembro, Manaus - Amazonas, Brazil</span>
               </div>
             </div>
           </div>
@@ -189,9 +189,9 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <span>CRO-AM Registrado</span>
             <span>•</span>
-            <span>Manaus - Amazonas</span>
+            <span>Carvalho Center - Manaus</span>
             <span>•</span>
-            <span>Avaliação 4.7 ★ no Google Maps</span>
+            <span>Avaliação 5.0 ★ no Google Maps</span>
           </div>
         </div>
       </div>

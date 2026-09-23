@@ -15,10 +15,10 @@ import JsonLd from '@/components/ui/JsonLd';
 import { createMetadata, generateMedicalProcedureSchema, generateFaqSchema } from '@/lib/seo';
 
 const service = SERVICES.find((s) => s.slug === 'braces')!;
-const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[1] || DENTISTS[0];
+const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Aparelhos Ortodônticos & Aligners em Manaus | Dra. Bruna & Dr. Marcelo',
+  title: 'Aparelhos Ortodônticos & Aligners em Manaus | Dental Studio Doctor',
   description:
     'Aparelhos ortodônticos convencionais, estéticos e alinhadores em Manaus com planejamento cuidadoso e atendimento humanizado.',
   pathname: '/braces/',

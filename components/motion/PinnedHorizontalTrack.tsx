@@ -194,7 +194,7 @@ export default function PinnedHorizontalTrack({
           <span
             key={idx}
             className={`w-2 h-2 rounded-full transition-all ${
-              idx === currentIndex - 1 ? 'bg-[#08A9DE] w-4' : 'bg-[#D7E1E8]'
+              idx === currentIndex - 1 ? 'bg-[#111111] w-4' : 'bg-[#D4D4D1]'
             }`}
           />
         ))}

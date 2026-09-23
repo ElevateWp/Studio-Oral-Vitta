@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://drmarcelosouzabezerra.com.br';
+export const BASE_URL = 'https://dentalstudiomanaus.com.br';
 
 export function createMetadata({
   title,
@@ -89,13 +89,13 @@ export function generateLocalBusinessSchema() {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         opens: '08:00',
-        closes: '18:00',
+        closes: '20:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Saturday'],
         opens: '08:00',
-        closes: '14:00',
+        closes: '18:00',
       },
     ],
     medicalSpecialty: [

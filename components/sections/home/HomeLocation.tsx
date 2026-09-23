@@ -41,7 +41,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
                 </address>
                 <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
-                  {CLINIC_INFO.primaryLocation.directions} (Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas, Brazil)
+                  {CLINIC_INFO.primaryLocation.directions} (Plus Code: WX7M+77 Parque Dez de Novembro, Manaus - Amazonas, Brazil)
                 </p>
               </div>
             </AnimateOnScroll>
@@ -86,7 +86,7 @@ export default function HomeLocation() {
               <div className="flex flex-wrap items-center gap-4 pt-6">
                 <Button
                   href={`https://maps.google.com/?q=${encodeURIComponent(
-                    `Av. Borba, 1438 - Cachoeirinha, Manaus - AM, 69065-030, Brazil`
+                    `Av. Gabriel Corrêa Pedrosa, 180 - Parque Dez de Novembro, Manaus - AM, 69055-011, Brazil`
                   )}`}
                   variant="ghost"
                   size="md"
@@ -105,14 +105,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/clinic-exterior.jpg"
-                  alt="Consultório Odontológico Dr. Marcelo de Souza Bezerra"
+                  src="/images/clinic-consultation-room.jpg"
+                  alt="Dental Studio - Clínica Odontológica em Manaus"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Consultório Odontológico em Manaus
+                  Dental Studio • Carvalho Center
                 </div>
               </div>
             </AnimateOnScroll>
@@ -121,13 +121,13 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Atendimento Clínico & Domiciliar
+                    Atendimento Odontológico de Excelência
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Estrutura Completa e Confortável
+                    Estrutura Moderna no Carvalho Center
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Atendimento no consultório no bairro Cachoeirinha em Manaus e serviço especializado de odontologia domiciliar.
+                    Atendimento no Carvalho Center, Parque Dez de Novembro em Manaus. Estrutura acolhedora, equipamentos modernos e comodidade para você.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />
@@ -137,7 +137,7 @@ export default function HomeLocation() {
 
                 <div className="pt-4 mt-4 border-t border-mist flex flex-wrap items-center justify-between gap-4">
                   <span className="font-body text-13 text-forest-ink/60">
-                    Plus Code: VXHW+46 Cachoeirinha, Manaus
+                    Plus Code: WX7M+77 Parque Dez de Novembro, Manaus
                   </span>
                   <Button
                     href="/contact/"

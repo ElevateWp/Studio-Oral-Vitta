@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contato & Localização | Dr. Marcelo de Souza Bezerra - Manaus',
+  title: 'Contato & Localização | Dental Studio Doctor - Manaus',
   description:
-    'Entre em contato com o Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus. WhatsApp/Telefone: +55 92 99265-6280. Av. Borba, 1438 - Cachoeirinha, Manaus - AM.',
+    'Entre em contato com o Consultório Odontológico Dental Studio Doctor em Manaus. WhatsApp/Telefone: +55 92 99265-6280. Av. Borba, 1438 - Cachoeirinha, Manaus - AM.',
   pathname: '/contact/',
 });
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 </span>
                 <WordRevealH1 text="Fale com nossa equipe odontológica." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Agende sua avaliação de implantes de carga imediata, tire dúvidas sobre odontologia domiciliar ou aparelhos ortodônticos diretamente pelo WhatsApp com o Dr. Marcelo e a Dra. Bruna.
+                  Agende sua avaliação de implantes de carga imediata, tire dúvidas sobre odontologia domiciliar ou aparelhos ortodônticos diretamente pelo WhatsApp com o Dental Studio Doctor.
                 </p>
               </AnimateOnScroll>
             </div>

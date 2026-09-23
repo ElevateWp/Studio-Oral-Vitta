@@ -2,10 +2,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
 import { CLINIC_INFO } from '@/lib/clinic-data';
 import { MOTION, isReducedMotion } from '@/lib/motion';
 import Button from '@/components/ui/Button';
-import TextureBackground from '@/components/layout/TextureBackground';
 
 export default function HomeHero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -110,8 +110,18 @@ export default function HomeHero() {
       ref={heroRef}
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
     >
-      {/* Signature Element 1 of 4: Organic Marbled Vein Texture bleeding off right edge */}
-      <TextureBackground variant="hero" className="opacity-40" />
+      <Image
+        src="/images/hero-dental-treatment.png"
+        alt="Dental professional treating a patient"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[58%_center]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-r from-[#F5F5F3]/95 via-[#F5F5F3]/85 to-[#F5F5F3]/25 md:from-[#F5F5F3]/95 md:via-[#F5F5F3]/80 md:to-transparent"
+      />
 
       <div className="relative z-10 max-w-site mx-auto px-4 sm:px-6 md:px-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -121,7 +131,7 @@ export default function HomeHero() {
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#111827] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#111111] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <span
@@ -144,7 +154,7 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              Liderado pelo <strong className="font-semibold text-forest-ink">Dr. Marcelo de Souza Bezerra</strong> e pela <strong className="font-semibold text-forest-ink">Dra. Bruna</strong>, oferecemos implantes de carga imediata que podem trazer seu sorriso em 1 dia, atendimento em odontologia domiciliar e aparelhos ortodônticos com excelência e conforto.
+              Na Dental Studio, o Dental Studio Doctor oferece implantes de carga imediata, atendimento em odontologia domiciliar e aparelhos ortodônticos com cuidado e conforto.
             </p>
 
             <div
@@ -155,7 +165,7 @@ export default function HomeHero() {
                 Agendar Consulta
               </Button>
               <Button
-                href={`https://api.whatsapp.com/send?phone=5592992656280`}
+                href={`https://api.whatsapp.com/send?phone=5592984798868`}
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto font-medium"
@@ -166,13 +176,13 @@ export default function HomeHero() {
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#111827]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#111111]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#0A2472]">{CLINIC_INFO.primaryLocation.street}</span>
+              <span className="font-medium text-[#111111]">Carvalho Center</span>
               <span className="hidden sm:inline">•</span>
-              <span>{CLINIC_INFO.primaryLocation.suite}, {CLINIC_INFO.primaryLocation.city}</span>
+              <span>{CLINIC_INFO.primaryLocation.street}, {CLINIC_INFO.primaryLocation.suite}</span>
               <span className="hidden sm:inline">•</span>
-              <span className="text-[#08A9DE] font-semibold">★ 4.7 (59 Avaliações Google)</span>
+              <span className="text-[#111111] font-semibold">★ 5.0 (Avaliação Google)</span>
             </div>
           </div>
 
@@ -181,16 +191,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F4F7FA] border border-[#D7E1E8] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#08A9DE] uppercase tracking-wider font-semibold">
+            <div className="p-6 sm:p-8 bg-[#E8E8E6] border border-[#D4D4D1] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#111111] uppercase tracking-wider font-semibold">
                 Destaques Clínicos
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#111827]/90 leading-relaxed">
-                <strong className="text-[#0A2472] font-semibold">&ldquo;Implantes carga imediata pode trazer seu sorriso em 1 dia&rdquo;</strong> &mdash; Atendimento humanizado com <strong className="text-[#0A2472] font-semibold">Dr. Marcelo de Souza Bezerra</strong> e <strong className="text-[#0A2472] font-semibold">Dra. Bruna</strong> no consultório e em odontologia domiciliar.
+              <p className="font-body text-13 sm:text-15 text-[#111111]/90 leading-relaxed">
+                <strong className="text-[#111111] font-semibold">&ldquo;Dental Studio — Odontologia de Alta Performance&rdquo;</strong> &mdash; Atendimento humanizado no Carvalho Center, Parque Dez de Novembro, com cuidado dedicado ao seu sorriso.
               </p>
-              <div className="pt-3 border-t border-[#D7E1E8] flex items-center justify-between text-13 font-body text-[#111827]/70">
+              <div className="pt-3 border-t border-[#D4D4D1] flex items-center justify-between text-13 font-body text-[#111111]/70">
                 <span>Manaus - AM</span>
-                <span className="text-[#08A9DE] font-semibold">CRO-AM Verificado</span>
+                <span className="text-[#111111] font-semibold">CRO-AM Verificado</span>
               </div>
             </div>
           </div>

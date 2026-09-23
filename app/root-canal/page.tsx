@@ -14,12 +14,12 @@ import JsonLd from '@/components/ui/JsonLd';
 import { createMetadata, generateMedicalProcedureSchema, generateFaqSchema } from '@/lib/seo';
 
 const service = SERVICES.find((s) => s.slug === 'root-canal')!;
-const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[1] || DENTISTS[0];
+const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Tratamento de Canal em Manaus | Dra. Bruna & Dr. Marcelo',
+  title: 'Tratamento de Canal em Manaus | Dental Studio Doctor',
   description:
-    'Tratamento de canal moderno, seguro e sem dor em Manaus pela Dra. Bruna no Consultório Odontológico Dr. Marcelo de Souza Bezerra.',
+    'Tratamento de canal moderno, seguro e sem dor em Manaus com Dental Studio Doctor na Dental Studio.',
   pathname: '/root-canal/',
 });
 

@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Blog Odontológico & Artigos Clínicos | Dr. Marcelo de Souza Bezerra',
+  title: 'Blog Odontológico & Artigos Clínicos | Dental Studio Doctor',
   description:
-    'Artigos clínicos sobre implantes com carga imediata em 1 dia, odontologia domiciliar e aparelhos ortodônticos pelo Dr. Marcelo de Souza Bezerra e Dra. Bruna.',
+    'Artigos clínicos sobre implantes com carga imediata em 1 dia, odontologia domiciliar e aparelhos ortodônticos pelo Dental Studio Doctor.',
   pathname: '/blog/',
 });
 

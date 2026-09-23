@@ -18,8 +18,8 @@ export default function HomeReviews() {
               </h2>
             </div>
             <div className="flex items-center gap-3 bg-paper/10 border border-mist/20 px-4 py-2.5 rounded-none self-start md:self-auto">
-              <span className="text-lime text-18 font-bold">4.7 ★★★★★</span>
-              <span className="text-paper/80 font-body text-13">59 Avaliações no Google</span>
+              <span className="text-lime text-18 font-bold">5.0 ★★★★★</span>
+              <span className="text-paper/80 font-body text-13">Avaliação no Google Maps</span>
             </div>
           </div>
         </AnimateOnScroll>
@@ -33,7 +33,7 @@ export default function HomeReviews() {
             >
               <div className="flex flex-col justify-between p-8 border border-mist/20 bg-paper/5 h-full hover:bg-paper/10 transition-colors shadow-sm">
                 <div>
-                  <div className="flex items-center gap-1 text-amber-400 text-14 mb-4">
+                  <div className="flex items-center gap-1 text-[#C4C4C2] text-14 mb-4">
                     ★★★★★
                   </div>
                   <blockquote className="font-display text-20 md:text-23 text-paper leading-relaxed mb-8">

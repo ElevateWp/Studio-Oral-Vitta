@@ -14,12 +14,12 @@ import JsonLd from '@/components/ui/JsonLd';
 import { createMetadata, generateMedicalProcedureSchema, generateFaqSchema } from '@/lib/seo';
 
 const service = SERVICES.find((s) => s.slug === 'dental-cleaning')!;
-const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[1] || DENTISTS[0];
+const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Limpeza Dental & Profilaxia em Manaus | Dra. Bruna & Dr. Marcelo',
+  title: 'Limpeza Dental & Profilaxia em Manaus | Dental Studio Doctor',
   description:
-    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus.',
+    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Consultório Odontológico Dental Studio Doctor em Manaus.',
   pathname: '/dental-cleaning/',
 });
 

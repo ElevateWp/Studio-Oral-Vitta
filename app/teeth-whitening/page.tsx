@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'teeth-whitening')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Clareamento Dental em Manaus | Dr. Marcelo de Souza Bezerra',
+  title: 'Clareamento Dental em Manaus | Dental Studio Doctor',
   description:
-    'Clareamento dental em consultório e caseiro supervisionado com segurança e proteção ao esmalte pelo Dr. Marcelo de Souza Bezerra em Manaus.',
+    'Clareamento dental em consultório e caseiro supervisionado com segurança e proteção ao esmalte pelo Dental Studio Doctor em Manaus.',
   pathname: '/teeth-whitening/',
 });
 

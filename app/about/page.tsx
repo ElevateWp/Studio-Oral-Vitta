@@ -14,9 +14,9 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Sobre o Consultório | Dr. Marcelo de Souza Bezerra',
+  title: 'Sobre o Consultório | Dental Studio Doctor',
   description:
-    'Conheça o Consultório Odontológico Dr. Marcelo de Souza Bezerra em Manaus: referência em implantes de carga imediata em 1 dia, odontologia domiciliar e aparelhos ortodônticos.',
+    'Conheça o Consultório Odontológico Dental Studio Doctor em Manaus: referência em implantes de carga imediata em 1 dia, odontologia domiciliar e aparelhos ortodônticos.',
   pathname: '/about/',
 });
 
@@ -24,7 +24,7 @@ const TIMELINE = [
   {
     year: '2012',
     title: 'Fundação do Consultório em Manaus',
-    description: 'Dr. Marcelo de Souza Bezerra estabelece a clínica com foco em reabilitação oral, implantodontia de excelência e atendimento odontológico domiciliar.',
+    description: 'Dental Studio Doctor estabelece a clínica com foco em reabilitação oral, implantodontia de excelência e atendimento odontológico domiciliar.',
   },
   {
     year: '2016',
@@ -39,7 +39,7 @@ const TIMELINE = [
   {
     year: '2024',
     title: 'Excelência em Ortodontia & Estética',
-    description: 'Integração de aparelhos estéticos, alinhadores e novos protocolos de clareamento e restaurações estéticas com a Dra. Bruna.',
+    description: 'Integração de aparelhos estéticos, alinhadores e novos protocolos de clareamento e restaurações estéticas com a Dental Studio Doctor.',
   },
 ];
 
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 </span>
                 <WordRevealH1 text="Compromisso com seu sorriso, agilidade e excelência técnica." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Liderado pelo Dr. Marcelo de Souza Bezerra e Dra. Bruna, nosso consultório atende pacientes que buscam tratamentos modernos de implantes de carga imediata (recuperação do sorriso em 1 dia), aparelhos ortodônticos e atendimento em odontologia domiciliar com cuidado humanizado." />
+                  <ScrubbedParagraph text="Na Dental Studio, Dental Studio Doctor atende pacientes que buscam tratamentos modernos de implantes de carga imediata, aparelhos ortodônticos e atendimento odontológico acolhedor em Manaus." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -92,11 +92,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Responsável Técnico</span>
-                    <span className="font-medium text-forest">Dr. Marcelo de Souza Bezerra</span>
-                  </div>
-                  <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Especialista & Docente</span>
-                    <span className="font-medium text-forest">Dra. Bruna</span>
+                    <span className="font-medium text-forest">Dental Studio Doctor</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Registro</span>
@@ -188,29 +184,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Our Dentists */}
+      {/* SECTION 4: Dental Studio Doctor */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
               <div>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Corpo Clínico
+                  Profissional
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Nossos Especialistas
+                  Dental Studio Doctor
                 </h2>
               </div>
               <Link
                 href="/dentists/"
                 className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
               >
-                Ver perfis detalhados →
+                Ver perfil detalhado →
               </Link>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 gap-10 max-w-xl mx-auto">
             {DENTISTS.map((dentist, idx) => (
               <DentistCard key={dentist.id} dentist={dentist} offsetY={idx === 1} />
             ))}
@@ -252,7 +248,7 @@ export default function AboutPage() {
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
                       src="/images/dental-operatory.jpg"
-                      alt="Consultório Odontológico Dr. Marcelo de Souza Bezerra"
+                      alt="Consultório Odontológico Dental Studio Doctor"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
@@ -338,7 +334,7 @@ export default function AboutPage() {
                 Agendamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Agende sua avaliação com o Dr. Marcelo e Dra. Bruna
+                Agende sua avaliação com o Dental Studio Doctor
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
                 Atendimento no consultório em Manaus e serviço de odontologia domiciliar com agilidade e qualidade.

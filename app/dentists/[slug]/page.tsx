@@ -67,7 +67,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Nossos Dentistas', path: '/dentists/' },
+              { name: 'Dental Studio Doctor', path: '/dentists/' },
               { name: dentist.name, path: `/dentists/${dentist.slug}/` },
             ]}
           />
@@ -86,10 +86,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                     className="object-cover object-top"
                   />
                 </div>
-                <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
+                {dentist.experienceYears > 0 && <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
                   <span>Prática Clínica:</span>
                   <span className="font-medium text-forest">{dentist.experienceYears}+ Anos de Experiência</span>
-                </div>
+                </div>}
               </AnimateOnScroll>
             </div>
 
@@ -120,7 +120,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                     Agendar consulta com {dentist.name}
                   </Button>
                   <Button href="/dentists/" variant="ghost" size="lg">
-                    Ver Todos os Profissionais
+                    Voltar à equipe
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -130,10 +130,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
       </section>
 
       {/* Academic Credentials & Memberships */}
-      <section className="py-20 md:py-32 border-b border-mist">
+      {(dentist.education.length > 0 || dentist.memberships.length > 0) && <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-6">
+            {dentist.education.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
                   Formação & Especializações
@@ -147,9 +147,9 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   ))}
                 </ul>
               </AnimateOnScroll>
-            </div>
+            </div>}
 
-            <div className="lg:col-span-6">
+            {dentist.memberships.length > 0 && <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
                 <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
                   Associações & Registros
@@ -163,10 +163,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   ))}
                 </ul>
               </AnimateOnScroll>
-            </div>
+            </div>}
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* Assigned Clinical Disciplines */}
       {relatedServices.length > 0 && (

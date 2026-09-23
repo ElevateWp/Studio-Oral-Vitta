@@ -12,9 +12,9 @@ import { DENTISTS, SERVICES, CLINIC_INFO } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Corpo Clínico | Dr. Marcelo de Souza Bezerra & Dra. Bruna',
+  title: 'Equipe Clínica | Dental Studio Doctor',
   description:
-    'Conheça o Dr. Marcelo de Souza Bezerra (Responsável Técnico) e a Dra. Bruna: especialistas em implantes de carga imediata, odontologia domiciliar e aparelhos ortodônticos em Manaus.',
+    'Conheça Dental Studio Doctor, o profissional da Dental Studio em Manaus.',
   pathname: '/dentists/',
 });
 
@@ -24,7 +24,7 @@ export default function DentistsPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Nossos Dentistas', path: '/dentists/' }]} />
+          <Breadcrumbs items={[{ name: 'Dental Studio Doctor', path: '/dentists/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
@@ -32,9 +32,9 @@ export default function DentistsPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
                   Equipe Odontológica
                 </span>
-                <WordRevealH1 text="Profissionais dedicados à excelência, agilidade e cuidado humanizado." />
+                <WordRevealH1 text="Atendimento odontológico dedicado, ágil e humanizado." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Liderado pelo Dr. Marcelo de Souza Bezerra e pela Dra. Bruna, nosso consultório oferece procedimentos de alta precisão em implantes de carga imediata (recuperação do sorriso em 1 dia), atendimento em odontologia domiciliar e aparelhos ortodônticos em Manaus." />
+                  <ScrubbedParagraph text="Dental Studio Doctor atende na Dental Studio, oferecendo cuidado odontológico acolhedor em Manaus." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -42,9 +42,9 @@ export default function DentistsPage() {
             <div className="lg:col-span-4 lg:pl-6 flex flex-col justify-end">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-2 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Atendimento Qualificado & CRO-AM</span>
+                  <span className="font-medium text-forest block">Atendimento odontológico</span>
                   <p className="text-forest-ink/70">
-                    Tratamentos realizados por cirurgiões-dentistas experientes, com atendimento em consultório e serviço domiciliar.
+                    Atendimento realizado na Dental Studio, com atendimento em consultório e serviço domiciliar.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -59,20 +59,20 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Perfil dos Especialistas
+                Perfil do Profissional
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Nossos Dentistas
+                Dental Studio Doctor
               </h2>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-4xl mx-auto pb-8">
+          <div className="grid grid-cols-1 gap-10 max-w-xl mx-auto pb-8">
             {DENTISTS.map((dentist, idx) => (
               <DentistCard
                 key={dentist.id}
                 dentist={dentist}
-                offsetY={idx === 1}
+                offsetY={false}
               />
             ))}
           </div>
@@ -85,7 +85,7 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Especialidades do Consultório
+                Atuação Clínica
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
                 Áreas de Atuação
@@ -101,7 +101,7 @@ export default function DentistsPage() {
                     Implantes & Carga Imediata
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Técnica de carga imediata que pode trazer seu sorriso em 1 dia, sob responsabilidade do Dr. Marcelo de Souza Bezerra.
+                    Técnica de carga imediata que pode trazer seu sorriso em 1 dia, sob responsabilidade do Dental Studio Doctor.
                   </p>
                 </div>
                 <Link href="/dental-implants/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -133,7 +133,7 @@ export default function DentistsPage() {
                     Aparelhos Ortodônticos
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Aparelhos metálicos, estéticos e alinhadores para todas as idades com a Dra. Bruna e Dr. Marcelo.
+                    Aparelhos metálicos, estéticos e alinhadores para todas as idades com a Dental Studio Doctor.
                   </p>
                 </div>
                 <Link href="/braces/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -167,10 +167,10 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Credenciais Acadêmicas
+                Perfil profissional
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Formação e Qualificação dos Profissionais
+                Informações profissionais
               </h2>
             </div>
           </AnimateOnScroll>
@@ -219,7 +219,7 @@ export default function DentistsPage() {
                   “Implantes carga imediata pode trazer seu sorriso em 1 dia — unindo tecnologia, agilidade e o acolhimento que você merece.”
                 </span>
                 <span className="font-body text-13 text-forest block mt-2 font-medium">
-                  — Dr. Marcelo de Souza Bezerra, Responsável Técnico
+                  — Dental Studio Doctor, Responsável Técnico
                 </span>
               </div>
             </div>
@@ -270,7 +270,7 @@ export default function DentistsPage() {
                 Agendamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Agende sua consulta com o Dr. Marcelo e Dra. Bruna
+                Agende sua consulta com o Dental Studio Doctor
               </h2>
             </div>
           </AnimateOnScroll>

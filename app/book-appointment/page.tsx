@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Agendar Consulta Odontológica | Dr. Marcelo de Souza Bezerra',
+  title: 'Agendar Consulta Odontológica | Dental Studio Doctor',
   description:
-    'Solicite seu agendamento para implantes de carga imediata em 1 dia, odontologia domiciliar ou aparelhos ortodônticos com o Dr. Marcelo de Souza Bezerra em Manaus.',
+    'Solicite seu agendamento para implantes de carga imediata em 1 dia, odontologia domiciliar ou aparelhos ortodônticos com o Dental Studio Doctor em Manaus.',
   pathname: '/book-appointment/',
 });
 
@@ -54,7 +54,7 @@ export default function BookAppointmentPage() {
                 </span>
                 <WordRevealH1 text="Reserve sua avaliação odontológica." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Agende sua consulta para implantes de carga imediata (recuperação do sorriso em 1 dia), avaliação ortodôntica ou solicite atendimento domiciliar em Manaus com o Dr. Marcelo de Souza Bezerra e Dra. Bruna." />
+                  <ScrubbedParagraph text="Agende sua consulta para implantes de carga imediata (recuperação do sorriso em 1 dia), avaliação ortodôntica ou solicite atendimento domiciliar em Manaus com o Dental Studio Doctor." />
                 </div>
               </AnimateOnScroll>
             </div>

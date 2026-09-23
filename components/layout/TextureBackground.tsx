@@ -45,7 +45,7 @@ export default function TextureBackground({
 
   // Default opacities based on permitted variants
   const defaultOpacity =
-    variant === 'hero' ? 0.38 : variant === 'divider' ? 0.45 : variant === 'contact' ? 0.28 : 0.18;
+    variant === 'hero' ? 0.16 : variant === 'divider' ? 0.22 : variant === 'contact' ? 0.14 : 0.12;
   const activeOpacity = opacity ?? defaultOpacity;
 
   return (
@@ -82,25 +82,25 @@ export default function TextureBackground({
             <feColorMatrix
               type="matrix"
               values="
-                0.11 0 0 0 0.11
-                0 0.24 0 0 0.24
-                0 0 0.19 0 0.19
-                0 0 0 0.85 0
+                0.15 0 0 0 0.15
+                0 0.15 0 0 0.15
+                0 0 0.15 0 0.15
+                0 0 0 0.5 0
               "
             />
           </filter>
 
           <linearGradient id={`hero-mask-grad-${variant}`} x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#F4F3EF" stopOpacity="0" />
-            <stop offset="35%" stopColor="#F4F3EF" stopOpacity="0.2" />
-            <stop offset="70%" stopColor="#1B3D30" stopOpacity="0.7" />
-            <stop offset="100%" stopColor="#0F241C" stopOpacity="0.95" />
+            <stop offset="0%" stopColor="#F5F5F3" stopOpacity="0" />
+            <stop offset="35%" stopColor="#F5F5F3" stopOpacity="0.2" />
+            <stop offset="70%" stopColor="#1A1A1A" stopOpacity="0.7" />
+            <stop offset="100%" stopColor="#1A1A1A" stopOpacity="0.95" />
           </linearGradient>
 
           <radialGradient id={`divider-radial-${variant}`} cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#1B3D30" stopOpacity="0.8" />
-            <stop offset="60%" stopColor="#1B3D30" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#F4F3EF" stopOpacity="0" />
+            <stop offset="0%" stopColor="#1A1A1A" stopOpacity="0.8" />
+            <stop offset="60%" stopColor="#1A1A1A" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#F5F5F3" stopOpacity="0" />
           </radialGradient>
         </defs>
 
