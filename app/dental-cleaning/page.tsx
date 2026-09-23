@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-cleaning')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Limpeza Dental & Profilaxia em Manaus | Dental Studio Doctor',
+  title: 'Limpeza Dental & Profilaxia em Manaus | Dr. Fernando',
   description:
-    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Consultório Odontológico Dental Studio Doctor em Manaus.',
+    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Consultório Odontológico Dr. Fernando em Manaus.',
   pathname: '/dental-cleaning/',
 });
 

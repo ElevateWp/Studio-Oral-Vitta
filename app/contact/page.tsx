@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contato & Localização | Dental Studio Doctor - Manaus',
+  title: 'Contato & Localização | Studio Oral Vitta - Rio Branco',
   description:
-    'Entre em contato com o Consultório Odontológico Dental Studio Doctor em Manaus. WhatsApp/Telefone: +55 92 99265-6280. Av. Borba, 1438 - Cachoeirinha, Manaus - AM.',
+    'Entre em contato com a Studio Oral Vitta em Rio Branco, Acre. Telefone: +55 68 98108-1266.',
   pathname: '/contact/',
 });
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 </span>
                 <WordRevealH1 text="Fale com nossa equipe odontológica." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Agende sua avaliação de implantes de carga imediata, tire dúvidas sobre odontologia domiciliar ou aparelhos ortodônticos diretamente pelo WhatsApp com o Dental Studio Doctor.
+                  Entre em contato com a Studio Oral Vitta em Rio Branco, Acre.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                       <div>
                         <span className="font-body text-13 text-forest font-semibold block">WhatsApp Direto</span>
                         <a
-                          href="https://api.whatsapp.com/send?phone=5592992656280"
+                          href="https://api.whatsapp.com/send?phone=5568981081266"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-display text-21 text-forest font-bold hover:underline"
@@ -87,30 +87,6 @@ export default function ContactPage() {
                       <span className="font-body text-13 text-forest-ink/60">Seg – Sex (08:00 – 18:00)</span>
                     </div>
 
-                    {/* Domiciliary Care Info */}
-                    <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                      <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">Odontologia Domiciliar</span>
-                        <span className="font-display text-18 text-forest-ink">
-                          Manaus e Região Metropolitana
-                        </span>
-                      </div>
-                      <span className="font-body text-13 text-forest-ink/60">Sob Agendamento</span>
-                    </div>
-
-                    {/* Email */}
-                    <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                      <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">E-mail</span>
-                        <a
-                          href={`mailto:${CLINIC_INFO.contact.email}`}
-                          className="font-display text-18 text-forest hover:underline"
-                        >
-                          {CLINIC_INFO.contact.email}
-                        </a>
-                      </div>
-                      <span className="font-body text-13 text-forest-ink/60">Atendimento Clínico</span>
-                    </div>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -125,12 +101,12 @@ export default function ContactPage() {
                     {CLINIC_INFO.name}
                   </h3>
                   <address className="not-italic font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
-                    {CLINIC_INFO.primaryLocation.street} - {CLINIC_INFO.primaryLocation.suite}
+                    {CLINIC_INFO.primaryLocation.street}
                     <br />
                     {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    <strong>Ponto de Referência & Plus Code:</strong> {CLINIC_INFO.primaryLocation.directions} Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas, Brazil.
+                    <strong>Ponto de Referência & Plus Code:</strong> {CLINIC_INFO.primaryLocation.landmarks}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -162,20 +138,20 @@ export default function ContactPage() {
                       Localização no Google Maps & Plus Code
                     </span>
                     <h3 className="font-display text-26 text-paper mb-2">
-                      Av. Borba, 1438 - Cachoeirinha
+                      Studio Oral Vitta
                     </h3>
                     <p className="font-body text-13 text-paper/80 leading-relaxed">
-                      Manaus - Amazonas, CEP 69065-030, Brasil. Plus Code: VXHW+46 Cachoeirinha, Manaus - Amazonas.
+                      {CLINIC_INFO.primaryLocation.directions}
                     </p>
                     <div className="mt-3 inline-flex items-center gap-2 bg-paper/10 px-3 py-1 text-lime font-body text-13">
-                      <span>★ 4.7 Avaliação (59 Avaliações no Google)</span>
+                      <span>★ 5.0 Avaliação (5 avaliações no Google)</span>
                     </div>
                   </div>
 
                   <div className="pt-6 border-t border-mist/20 flex flex-wrap items-center justify-between gap-4">
                     <Button
                       href={`https://maps.google.com/?q=${encodeURIComponent(
-                        `Av. Borba, 1438 - Cachoeirinha, Manaus - AM, 69065-030, Brazil`
+                        CLINIC_INFO.primaryLocation.directions
                       )}`}
                       variant="lime"
                       size="sm"
@@ -183,12 +159,12 @@ export default function ContactPage() {
                       Abrir no Google Maps
                     </Button>
                     <a
-                      href="https://api.whatsapp.com/send?phone=5592992656280"
+                      href="https://api.whatsapp.com/send?phone=5568981081266"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"
                     >
-                      WhatsApp: +55 92 99265-6280
+                      WhatsApp: {CLINIC_INFO.contact.whatsapp}
                     </a>
                   </div>
                 </div>

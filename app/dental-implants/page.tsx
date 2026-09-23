@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-implants')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Implantes Dentários & Carga Imediata em Manaus | Dental Studio Doctor',
+  title: 'Implantes Dentários & Carga Imediata em Manaus | Dr. Fernando',
   description:
-    'Implantes dentários de carga imediata para trazer seu sorriso em 1 dia com fixação precisa em titânio e zircônia pelo Dental Studio Doctor em Manaus.',
+    'Implantes dentários de carga imediata para trazer seu sorriso em 1 dia com fixação precisa em titânio e zircônia pelo Dr. Fernando em Manaus.',
   pathname: '/dental-implants/',
 });
 

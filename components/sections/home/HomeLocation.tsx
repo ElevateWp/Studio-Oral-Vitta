@@ -21,7 +21,7 @@ export default function HomeLocation() {
               Localização & Horário de Atendimento
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Visite o Consultório em Manaus
+              Visite o Consultório em Rio Branco
             </h2>
           </div>
         </AnimateOnScroll>
@@ -35,13 +35,13 @@ export default function HomeLocation() {
                   {CLINIC_INFO.name}
                 </h3>
                 <address className="not-italic font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  {CLINIC_INFO.primaryLocation.street} - {CLINIC_INFO.primaryLocation.suite}
+                  {CLINIC_INFO.primaryLocation.street}
                   <br />
                   {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state},{' '}
                   {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
                 </address>
                 <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
-                  {CLINIC_INFO.primaryLocation.directions} (Plus Code: WX7M+77 Parque Dez de Novembro, Manaus - Amazonas, Brazil)
+                  {CLINIC_INFO.primaryLocation.landmarks}
                 </p>
               </div>
             </AnimateOnScroll>
@@ -86,7 +86,7 @@ export default function HomeLocation() {
               <div className="flex flex-wrap items-center gap-4 pt-6">
                 <Button
                   href={`https://maps.google.com/?q=${encodeURIComponent(
-                    `Av. Gabriel Corrêa Pedrosa, 180 - Parque Dez de Novembro, Manaus - AM, 69055-011, Brazil`
+                    CLINIC_INFO.primaryLocation.directions
                   )}`}
                   variant="ghost"
                   size="md"
@@ -105,14 +105,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/clinic-consultation-room.jpg"
-                  alt="Dental Studio - Clínica Odontológica em Manaus"
+                  src="/images/vitta-clinic-exterior.png"
+                  alt="Studio Oral Vitta - Clínica odontológica em Rio Branco"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Dental Studio • Carvalho Center
+                  Studio Oral Vitta • Rio Branco
                 </div>
               </div>
             </AnimateOnScroll>
@@ -124,10 +124,10 @@ export default function HomeLocation() {
                     Atendimento Odontológico de Excelência
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Estrutura Moderna no Carvalho Center
+                    Clínica odontológica em Floresta
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Atendimento no Carvalho Center, Parque Dez de Novembro em Manaus. Estrutura acolhedora, equipamentos modernos e comodidade para você.
+                    Studio Oral Vitta, na região de Floresta, em Rio Branco, Acre.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />
@@ -137,7 +137,7 @@ export default function HomeLocation() {
 
                 <div className="pt-4 mt-4 border-t border-mist flex flex-wrap items-center justify-between gap-4">
                   <span className="font-body text-13 text-forest-ink/60">
-                    Plus Code: WX7M+77 Parque Dez de Novembro, Manaus
+                    Plus Code: {CLINIC_INFO.primaryLocation.landmarks}
                   </span>
                   <Button
                     href="/contact/"

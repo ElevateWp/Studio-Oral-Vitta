@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --paper: #F5F5F3; /* Main Background */
-    --paper-secondary: #E8E8E6; /* Secondary Background */
-    --forest: #1A1A1A; /* Deep Sections */
-    --forest-ink: #111111; /* Main Text */
-    --secondary-text: #666666; /* Secondary Text */
-    --primary-brand: #111111; /* Primary Brand / CTA */
-    --brand-hover: #333333; /* Hover / Highlight */
-    --red-accent: #111111; /* Primary Red Accent */
-    --soft-blue: #E8E8E6; /* Soft Blue */
-    --lime: #C4C4C2; /* CTA / Highlights */
-    --mist: #D4D4D1; /* Borders */
+    --paper: #FAF9F6; /* Main Background */
+    --paper-secondary: #F1EEE8; /* Secondary Background */
+    --forest: #292722; /* Deep Sections */
+    --forest-ink: #2C2925; /* Main Text */
+    --secondary-text: #766E63; /* Secondary Text */
+    --primary-brand: #B59A6A; /* Primary Brand / CTA */
+    --brand-hover: #C9B486; /* Hover / Highlight */
+    --red-accent: #B59A6A; /* Primary Accent */
+    --soft-blue: #E4D7BC; /* Soft Gold */
+    --lime: #C9B486; /* Highlights */
+    --mist: #DED6C9; /* Borders */
     
     --font-display: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -72,7 +72,7 @@
 
   /* Form Inputs */
   input, select, textarea {
-    background-color: #F5F5F3;
+    background-color: var(--paper);
     color: var(--forest-ink);
     border: 1px solid var(--mist);
     border-radius: 8px;

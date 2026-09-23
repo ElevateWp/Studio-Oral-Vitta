@@ -15,7 +15,7 @@ export default function HomeFinalCTA() {
 
         <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
           <p className="font-body text-17 md:text-21 text-paper/80 leading-relaxed max-w-xl mb-10 mx-auto">
-            Avaliação detalhada, atendimento acolhedor e tratamentos odontológicos avançados na Dental Studio no Carvalho Center, Parque Dez de Novembro.
+            Entre em contato com a Studio Oral Vitta, clínica odontológica em Rio Branco, Acre.
           </p>
         </AnimateOnScroll>
 
@@ -25,7 +25,7 @@ export default function HomeFinalCTA() {
               Agendar Avaliação Online
             </Button>
             <Button
-              href={`https://api.whatsapp.com/send?phone=5592984798868`}
+              href={`https://api.whatsapp.com/send?phone=5568981081266`}
               variant="ghost"
               size="lg"
               className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"

@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Clinical Methodology
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Por que escolher a Dental Studio
+                Por que escolher a Studio Oral Vitta
               </h2>
 
               <div className="divide-y divide-mist">
@@ -65,38 +65,38 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                      src="/images/clinic-consultation-room.jpg"
-                      alt="Interior da clínica odontológica Dental Studio"
+                      src="/images/vitta-treatment-room.png"
+                      alt="Sala de tratamento odontológico da Studio Oral Vitta"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#111111]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                  <div className="absolute bottom-3 left-3 bg-[#2C2925]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
                     Sala de Tratamento Odontológico
                   </div>
                 </div>
                 {/* Second interior image */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/dental-studio-brand.jpg"
-                    alt="Identidade visual da Dental Studio"
+                    src="/images/vitta-brand-wall.jpg"
+                    alt="Placa Studio Oral Vitta na recepção"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
                 {/* Doctor portrait */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#E8E8E6] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F1EEE8] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/dental-studio-doctor.png"
-                    alt="Dental Studio Doctor"
+                    src="/images/dr-fernando.png"
+                    alt="Dr. Fernando"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#111111]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    Dental Studio Doctor
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#2C2925]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    Dr. Fernando
                   </div>
                 </div>
               </div>

@@ -25,7 +25,7 @@ export default function HomeReviews() {
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {PATIENT_REVIEWS.slice(0, 4).map((review, idx) => (
+          {PATIENT_REVIEWS.slice(0, 3).map((review, idx) => (
             <AnimateOnScroll
               key={review.id}
               animation={idx % 2 === 0 ? 'fade-right' : 'fade-left'}
@@ -33,7 +33,7 @@ export default function HomeReviews() {
             >
               <div className="flex flex-col justify-between p-8 border border-mist/20 bg-paper/5 h-full hover:bg-paper/10 transition-colors shadow-sm">
                 <div>
-                  <div className="flex items-center gap-1 text-[#C4C4C2] text-14 mb-4">
+                  <div className="flex items-center gap-1 text-[#C9B486] text-14 mb-4">
                     ★★★★★
                   </div>
                   <blockquote className="font-display text-20 md:text-23 text-paper leading-relaxed mb-8">

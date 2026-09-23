@@ -35,15 +35,15 @@ export default function Button({
 
   const variantStyles = {
     forest:
-      'bg-[#111111] text-paper hover:bg-[#333333] active:bg-[#111111] shadow-sm',
+      'bg-[#B59A6A] text-[#292722] hover:bg-[#C9B486] active:bg-[#B59A6A] shadow-sm',
     ghost:
-      'bg-transparent text-[#111111] border border-[#D4D4D1] hover:border-[#111111] hover:text-[#333333] hover:bg-[#E8E8E6]/40',
+      'bg-transparent text-[#2C2925] border border-[#DED6C9] hover:border-[#2C2925] hover:text-[#766E63] hover:bg-[#F1EEE8]/40',
     lime:
-      'bg-[#111111] text-paper hover:bg-[#333333] active:bg-[#111111] shadow-sm',
+      'bg-[#B59A6A] text-[#292722] hover:bg-[#C9B486] active:bg-[#B59A6A] shadow-sm',
     red:
-      'bg-[#111111] text-paper hover:bg-[#333333] active:bg-[#333333] shadow-sm',
+      'bg-[#B59A6A] text-[#292722] hover:bg-[#C9B486] active:bg-[#B59A6A] shadow-sm',
     navy:
-      'bg-[#111111] text-paper hover:bg-[#111111] active:bg-[#333333] shadow-sm',
+      'bg-[#2C2925] text-paper hover:bg-[#2C2925] active:bg-[#766E63] shadow-sm',
   };
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${

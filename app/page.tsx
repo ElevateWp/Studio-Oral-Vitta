@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Dental Studio | Clínica Odontológica em Manaus - AM',
+  title: 'Studio Oral Vitta | Clínica Odontológica em Rio Branco - AC',
   description:
-    'Dental Studio (5.0 ★ no Google Maps). Clínica odontológica especializada no Carvalho Center, Parque Dez de Novembro em Manaus. Implantes, ortodontia e estética dental.',
+    'Studio Oral Vitta (5.0 ★ no Google Maps), clínica odontológica em Floresta, Rio Branco - AC.',
   pathname: '/',
 });
 

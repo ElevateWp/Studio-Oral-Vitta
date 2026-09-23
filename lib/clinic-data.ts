@@ -60,12 +60,12 @@ export interface ClinicInformation {
     country: string;
     directions: string;
     landmarks: string;
-    coordinates: { lat: number; lng: number };
+  coordinates?: { lat: number; lng: number };
   };
   contact: {
     phone: string;
     emergencyPhone: string;
-    email: string;
+  email?: string;
     whatsapp: string;
   };
   schedule: { day: string; hours: string; isOpenToday?: boolean; isEmergencyOnly?: boolean }[];
@@ -74,47 +74,43 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: "Dental Studio",
-  legalName: "Dental Studio - Clínica Odontológica",
-  tagline: "Clínica Odontológica em Manaus • Carvalho Center, Parque Dez de Novembro.",
+  name: "Studio Oral Vitta",
+  legalName: "Studio Oral Vitta",
+  tagline: "Clínica odontológica em Floresta, Rio Branco, Acre.",
   establishedYear: 2018,
   primaryLocation: {
-    street: "Av. Gabriel Corrêa Pedrosa, 180",
-    suite: "Parque Dez de Novembro",
-    city: "Manaus",
-    state: "AM",
-    postalCode: "69055-011",
+    street: "Rua Primeiro de Maio, R. Boa Vista, 7 - Conjunto - Floresta",
+    suite: "",
+    city: "Rio Branco",
+    state: "AC",
+    postalCode: "69911-331",
     country: "Brazil",
-    directions: "Localizado no Carvalho Center — Av. Gabriel Corrêa Pedrosa, 180 - Parque Dez de Novembro, Manaus - AM, 69055-011, Brasil.",
-    landmarks: "Carvalho Center, Parque Dez de Novembro (Plus Code: WX7M+77 Parque Dez de Novembro, Manaus - Amazonas, Brazil)",
-    coordinates: { lat: -3.0787, lng: -60.0062 },
+    directions: "Rua Primeiro de Maio, R. Boa Vista, 7 - Conjunto - Floresta, Rio Branco - AC, 69911-331, Brazil",
+    landmarks: "25GC+M3 Floresta, Rio Branco - Acre, Brazil",
   },
   contact: {
-    phone: "+55 92 98479-8868",
-    emergencyPhone: "+55 92 98479-8868",
-    email: "contato@dentalstudio.com.br",
-    whatsapp: "+55 92 98479-8868",
+    phone: "+55 68 98108-1266",
+    emergencyPhone: "+55 68 98108-1266",
+    whatsapp: "+55 68 98108-1266",
   },
   schedule: [
-    { day: "Monday", hours: "8:00 AM – 8:00 PM" },
-    { day: "Tuesday", hours: "8:00 AM – 8:00 PM" },
-    { day: "Wednesday", hours: "8:00 AM – 8:00 PM" },
-    { day: "Thursday", hours: "8:00 AM – 8:00 PM" },
-    { day: "Friday", hours: "8:00 AM – 8:00 PM" },
-    { day: "Saturday", hours: "8:00 AM – 6:00 PM" },
-    { day: "Sunday", hours: "Closed", isEmergencyOnly: true },
+    { day: "Monday", hours: "8:00 AM – 6:00 PM" },
+    { day: "Tuesday", hours: "8:00 AM – 6:00 PM" },
+    { day: "Wednesday", hours: "8:00 AM – 6:00 PM" },
+    { day: "Thursday", hours: "8:00 AM – 6:00 PM" },
+    { day: "Friday", hours: "8:00 AM – 6:00 PM" },
+    { day: "Saturday", hours: "8:00 AM – 12:00 PM" },
+    { day: "Sunday", hours: "Closed" },
   ],
   verifiedStats: [
-    { value: 5.0, suffix: " ★", label: "Google Review Rating", description: "Avaliação máxima 5.0 no Google Maps." },
-    { value: 1, suffix: "", label: "Avaliação 5 Estrelas", description: "100% de recomendação com atendimento de excelência." },
-    { value: 1, suffix: " Dia", label: "Carga Imediata", description: "Implantes de carga imediata que podem trazer seu sorriso em 1 dia." },
-    { value: 100, suffix: "%", label: "Cuidado Humanizado", description: "Atendimento acolhedor adaptado às necessidades do paciente." },
+    { value: 5.0, suffix: " ★", label: "Avaliação no Google", description: "Nota 5.0 com base em 5 avaliações no Google Maps." },
+    { value: 5, suffix: "", label: "Avaliações no Google", description: "Cinco avaliações compartilhadas no Google Maps." },
   ],
   accreditations: [
-    "Conselho Regional de Odontologia do Amazonas (CRO-AM)",
-    "Atendimento em Odontologia, Implantes & Ortodontia",
+    "Clínica odontológica em Rio Branco, Acre",
+    "Atendimento conforme informações da clínica",
     "Avaliação 5.0 Estrelas no Google Maps",
-    "Localizado no Carvalho Center — Parque Dez de Novembro",
+    "Floresta, Rio Branco - AC",
   ],
 };
 
@@ -122,18 +118,18 @@ export const DENTISTS: DentistProfile[] = [
   {
     id: "dental-studio-doctor",
     slug: "dental-studio-doctor",
-    name: "Dental Studio Doctor",
-    title: "Dental Studio",
-    qualifications: "Clínica Odontológica",
+    name: "Dr. Fernando",
+    title: "Dentista",
+    qualifications: "",
     specialization: "Atendimento odontológico",
     experienceYears: 0,
-    bio: "Dental Studio Doctor integra a equipe da Dental Studio em Manaus. Informações adicionais sobre sua formação e experiência serão incluídas em breve.",
+    bio: "Dr. Fernando faz parte da equipe da Studio Oral Vitta.",
     philosophy: "Atendimento acolhedor, respeitoso e atento às necessidades de cada paciente.",
     education: ["Informações profissionais serão adicionadas em breve."],
     memberships: [],
     specialties: ["Atendimento odontológico"],
-    image: "/images/dental-studio-doctor.png",
-    warmImage: "/images/dental-studio-doctor.png",
+    image: "/images/dr-fernando.png",
+    warmImage: "/images/dr-fernando.png",
   },
 ];
 
@@ -174,7 +170,7 @@ export const SERVICES: ServiceDetail[] = [
         stepNumber: 2,
         title: "Instalação do Implante & Carga Imediata",
         duration: "60–90 minutos",
-        description: "Procedimento realizado com anestesia local de alta eficácia e conforto total pelo Dental Studio Doctor.",
+        description: "Procedimento realizado com anestesia local de alta eficácia e conforto total pelo Dr. Fernando.",
         clinicalDetails: "Verificação da estabilidade primária imediata para fixação do elemento protético.",
       },
       {
@@ -206,7 +202,7 @@ export const SERVICES: ServiceDetail[] = [
       ],
       whatIsIncluded: [
         "Avaliação clínica completa e planejamento digital",
-        "Instalação cirúrgica pelo Dental Studio Doctor",
+        "Instalação cirúrgica pelo Dr. Fernando",
         "Componentes e implantes certificados de alta qualidade",
         "Acompanhamento pós-operatório atencioso",
       ],
@@ -214,7 +210,7 @@ export const SERVICES: ServiceDetail[] = [
     },
     beforeAfterCase: {
       category: "Implante com Carga Imediata",
-      clinicalContext: "Paciente restaurado com implante dentário de carga imediata pelo Dental Studio Doctor, recuperando sorriso e função em 1 dia.",
+      clinicalContext: "Paciente restaurado com implante dentário de carga imediata pelo Dr. Fernando, recuperando sorriso e função em 1 dia.",
       beforeLabel: "Pré-operatório: Ausência Dentária",
       afterLabel: "Pós-operatório: Sorriso Recuperado em 1 Dia",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -233,7 +229,7 @@ export const SERVICES: ServiceDetail[] = [
       },
       {
         question: "O consultório oferece atendimento domiciliar?",
-        answer: "Sim! O Dental Studio Doctor disponibiliza atendimento de odontologia domiciliar com estrutura portátil especializada para pacientes com mobilidade reduzida.",
+        answer: "Sim! O Dr. Fernando disponibiliza atendimento de odontologia domiciliar com estrutura portátil especializada para pacientes com mobilidade reduzida.",
       },
     ],
   },
@@ -243,7 +239,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Root Canal",
     tagline: "Tratamento endodôntico seguro e confortável para preservar dentes naturais e eliminar a dor.",
     shortDescription: "Procedimento endodôntico avançado para remoção de infecções na polpa dentária, esterilização dos canais e alívio imediato do desconforto.",
-    clinicalExplanation: "O tratamento de canal é realizado quando a polpa dentária sofre inflamação ou infecção por cárie profunda ou trauma. A Dental Studio Doctor utiliza instrumentos rotatórios e técnicas modernas para limpar, descontaminar e selar o canal com segurança e suavidade, preservando o dente natural.",
+    clinicalExplanation: "O tratamento de canal é realizado quando a polpa dentária sofre inflamação ou infecção por cárie profunda ou trauma. A Dr. Fernando utiliza instrumentos rotatórios e técnicas modernas para limpar, descontaminar e selar o canal com segurança e suavidade, preservando o dente natural.",
     whoNeeds: [
       "Dor de dente intensa, espontânea ou pulsátil.",
       "Sensibilidade prolongada a alimentos quentes ou frios.",
@@ -273,7 +269,7 @@ export const SERVICES: ServiceDetail[] = [
         stepNumber: 2,
         title: "Limpeza & Instrumentação Rotatória",
         duration: "40 minutos",
-        description: "Remoção precisa do tecido inflamado e modelagem suave dos canais radiculares pela Dental Studio Doctor.",
+        description: "Remoção precisa do tecido inflamado e modelagem suave dos canais radiculares pelo Dr. Fernando.",
         clinicalDetails: "Localizador apical eletrônico para garantir o comprimento de trabalho ideal.",
       },
       {
@@ -304,14 +300,14 @@ export const SERVICES: ServiceDetail[] = [
       ],
       whatIsIncluded: [
         "Radiografias periapicais de diagnóstico e controle",
-        "Instrumentação rotatória e obturação pela Dental Studio Doctor",
+        "Instrumentação rotatória e obturação pelo Dr. Fernando",
         "Curativo antimicrobiano e selamento provisório",
       ],
       note: "Condições facilitadas e atendimento prioritário para alívio da dor.",
     },
     beforeAfterCase: {
       category: "Tratamento Endodôntico",
-      clinicalContext: "Paciente com dor aguda atendido com tratamento de canal moderno e seguro pela Dental Studio Doctor.",
+      clinicalContext: "Paciente com dor aguda atendido com tratamento de canal moderno e seguro pelo Dr. Fernando.",
       beforeLabel: "Pré-tratamento: Lesão Periapical e Dor",
       afterLabel: "Pós-tratamento: Canal Selado & Dente Salvo",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -336,7 +332,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Teeth Whitening",
     tagline: "Clareamento dental seguro e monitorado para um sorriso iluminado com proteção ao esmalte.",
     shortDescription: "Técnicas de clareamento em consultório e caseiro supervisionado para remoção de manchas e rejuvenescimento do sorriso sem agredir os dentes.",
-    clinicalExplanation: "O clareamento dental no Dental Studio utiliza géis clareadores certificados e proteção gengival rigorosa. Supervisionado pelo Dental Studio Doctor, o procedimento quebra moléculas de pigmentos acumuladas por café, chá e tempo sem alterar a densidade mineral do esmalte.",
+    clinicalExplanation: "O clareamento dental no Dental Studio utiliza géis clareadores certificados e proteção gengival rigorosa. Supervisionado pelo Dr. Fernando, o procedimento quebra moléculas de pigmentos acumuladas por café, chá e tempo sem alterar a densidade mineral do esmalte.",
     whoNeeds: [
       "Pessoas com dentes amarelados ou escurecidos por alimentação e hábitos diários.",
       "Pacientes que desejam valorizar o sorriso para eventos e autoestima.",
@@ -397,11 +393,11 @@ export const SERVICES: ServiceDetail[] = [
     },
     beforeAfterCase: {
       category: "Clareamento Dental",
-      clinicalContext: "Paciente com escurecimento dental restaurado para um tom brilhante e natural pelo Dental Studio Doctor.",
+      clinicalContext: "Paciente com escurecimento dental restaurado para um tom brilhante e natural pelo Dr. Fernando.",
       beforeLabel: "Pré-tratamento: Dentes Amarelados",
       afterLabel: "Pós-tratamento: Sorriso Iluminado",
-      beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
-      afterImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
+      beforeImage: "/images/teeth-whitening-before.jpg",
+      afterImage: "/images/teeth-whitening-after.jpg",
       timeframe: "Sessão em Consultório",
     },
     assignedDentistId: "dental-studio-doctor",
@@ -416,7 +412,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Dental Cleaning",
     tagline: "Profilaxia, raspagem ultrassônica e cuidado gengival preventivo.",
     shortDescription: "Limpeza dental profissional com ultrassom e polimento coronário para eliminação do tártaro, placa bacteriana e prevenção de gengivite.",
-    clinicalExplanation: "A profilaxia e raspagem periodontal removem tártaro acumulado e biofilme bacteriano. Conduzida com atenção minuciosa pela Dental Studio Doctor, a limpeza dental previne sangramentos, retração gengival e perda óssea, mantendo seu hálito fresco e gengivas saudáveis.",
+    clinicalExplanation: "A profilaxia e raspagem periodontal removem tártaro acumulado e biofilme bacteriano. Conduzida com atenção minuciosa pelo Dr. Fernando, a limpeza dental previne sangramentos, retração gengival e perda óssea, mantendo seu hálito fresco e gengivas saudáveis.",
     whoNeeds: [
       "Todos os pacientes a cada 6 meses para manutenção preventiva.",
       "Pessoas com sangramento ao escovar ou passar fio dental.",
@@ -477,7 +473,7 @@ export const SERVICES: ServiceDetail[] = [
     },
     beforeAfterCase: {
       category: "Saúde Gengival",
-      clinicalContext: "Remoção completa de placa e cálculo dental com recuperação da saúde gengival pela Dental Studio Doctor.",
+      clinicalContext: "Remoção completa de placa e cálculo dental com recuperação da saúde gengival pelo Dr. Fernando.",
       beforeLabel: "Pré-tratamento: Tártaro & Inflamação",
       afterLabel: "Pós-tratamento: Gengiva Rosa & Saudável",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -496,7 +492,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Braces & Orthodontics",
     tagline: "Aparelhos ortodônticos convencionais, estéticos e alinhadores para o alinhamento ideal do seu sorriso.",
     shortDescription: "Tratamento ortodôntico completo em Manaus com aparelhos metálicos, cerâmicos e alinhadores invisíveis para corrigir apinhamento, mordida e estética facial.",
-    clinicalExplanation: "O tratamento com aparelhos ortodônticos corrige o posicionamento dos dentes e das bases ósseas, proporcionando uma mordida equilibrada e um sorriso harmônico. Na Dental Studio, o Dental Studio Doctor oferece opções metálicas, estéticas e alinhadores modernos.",
+    clinicalExplanation: "O tratamento com aparelhos ortodônticos corrige o posicionamento dos dentes e das bases ósseas, proporcionando uma mordida equilibrada e um sorriso harmônico. Na Dental Studio, o Dr. Fernando oferece opções metálicas, estéticas e alinhadores modernos.",
     whoNeeds: [
       "Dentes tortos, apinhados ou com espaços (diastemas).",
       "Problemas de mordida cruzada, sobremordida ou mordida aberta.",
@@ -576,7 +572,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Cosmetic Dentistry",
     tagline: "Lentes de contato dental, facetas em resina e cerâmica com planejamento estético.",
     shortDescription: "Reabilitação estética personalizada para transformar forma, cor e alinhamento do sorriso com naturalidade e alta resistência.",
-    clinicalExplanation: "A odontologia estética no Dental Studio combina arte, precisão e materiais de alta tecnologia. Conduzido pelo Dental Studio Doctor, o tratamento com facetas e restaurações estéticas reproduz a textura e translucidez do esmalte natural com mínima intervenção.",
+    clinicalExplanation: "A odontologia estética no Dental Studio combina arte, precisão e materiais de alta tecnologia. Conduzido pelo Dr. Fernando, o tratamento com facetas e restaurações estéticas reproduz a textura e translucidez do esmalte natural com mínima intervenção.",
     whoNeeds: [
       "Dentes desgastados, fraturados ou com formato irregular.",
       "Manchas resistentes que não saem com clareamento convencional.",
@@ -603,7 +599,7 @@ export const SERVICES: ServiceDetail[] = [
         stepNumber: 2,
         title: "Preparo Conservador & Moldagem/Escaneamento",
         duration: "90 minutos",
-        description: "Preparo minimamente invasivo preservando o máximo de estrutura dental pelo Dental Studio Doctor.",
+        description: "Preparo minimamente invasivo preservando o máximo de estrutura dental pelo Dr. Fernando.",
         clinicalDetails: "Moldagem de precisão enviada para laboratório especializado.",
       },
       {
@@ -630,14 +626,14 @@ export const SERVICES: ServiceDetail[] = [
       factors: ["Número de dentes envolvidos e tipo de material (resina composta estratificada ou cerâmica pura)."],
       whatIsIncluded: [
         "Planejamento estético individualizado",
-        "Procedimentos clínicos com o Dental Studio Doctor",
+        "Procedimentos clínicos com o Dr. Fernando",
         "Materiais certificados de alta estética",
       ],
       note: "Excelente investimento na sua autoconfiança e imagem pessoal.",
     },
     beforeAfterCase: {
       category: "Estética do Sorriso",
-      clinicalContext: "Transformação estética do sorriso realizada com restaurações cerâmicas pelo Dental Studio Doctor.",
+      clinicalContext: "Transformação estética do sorriso realizada com restaurações cerâmicas pelo Dr. Fernando.",
       beforeLabel: "Pré-tratamento: Desgastes e Assimetria",
       afterLabel: "Pós-tratamento: Sorriso Renovado e Harmônico",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -756,7 +752,7 @@ export const BLOG_POSTS: BlogPost[] = [
     leadImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "dental-implants",
     content: {
-      intro: "A tecnologia de implantes dentários com carga imediata representa uma grande evolução para quem deseja rapidez e conforto na reposição de dentes. Sob os protocolos do Dental Studio Doctor em Manaus, é possível recuperar seu sorriso em 1 dia.",
+      intro: "A tecnologia de implantes dentários com carga imediata representa uma grande evolução para quem deseja rapidez e conforto na reposição de dentes. Sob os protocolos do Dr. Fernando em Manaus, é possível recuperar seu sorriso em 1 dia.",
       sections: [
         {
           heading: "O que é Carga Imediata?",
@@ -784,7 +780,7 @@ export const BLOG_POSTS: BlogPost[] = [
     leadImage: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "root-canal",
     content: {
-      intro: "Preservar a estrutura dental natural mantém a sensibilidade mastigatória e o equilíbrio da arcada. A Dental Studio Doctor destaca os avanços que tornam o tratamento de canal seguro e tranquilo.",
+      intro: "Preservar a estrutura dental natural mantém a sensibilidade mastigatória e o equilíbrio da arcada. A Dr. Fernando destaca os avanços que tornam o tratamento de canal seguro e tranquilo.",
       sections: [
         {
           heading: "A Precisão dos Instrumentos Rotatórios",
@@ -833,7 +829,7 @@ export const BLOG_POSTS: BlogPost[] = [
     leadImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "cosmetic-dentistry",
     content: {
-      intro: "O Dental Studio Doctor realiza atendimentos de odontologia domiciliar em Manaus, levando consultório portátil e cuidado humanizado até a residência dos pacientes.",
+      intro: "O Dr. Fernando realiza atendimentos de odontologia domiciliar em Manaus, levando consultório portátil e cuidado humanizado até a residência dos pacientes.",
       sections: [
         {
           heading: "Quem Pode se Beneficiar?",
@@ -847,30 +843,23 @@ export const BLOG_POSTS: BlogPost[] = [
 export const PATIENT_REVIEWS = [
   {
     id: "review-1",
-    author: "Levi Oliveira",
-    treatment: "Atendimento Odontológico de Excelência",
-    quote: "I received excellent service, I highly recommend them.",
-    year: "Google Review ★★★★★",
+    author: "Marcelo Sanchez",
+    treatment: "Avaliação no Google · 2 anos atrás",
+    quote: "Excellent service, attentive staff, Dr. Fernando is a very nice person, the secretary treated me very well, the place is well air-conditioned and beautiful. I highly recommend it.",
+    year: "★★★★★",
   },
   {
     id: "review-2",
-    author: "Paciente Verificado",
-    treatment: "Atendimento Clínico & Cuidados Preventivos",
-    quote: "Excelente estrutura no Carvalho Center e atendimento impecável por toda a equipe da Dental Studio.",
-    year: "Google Review ★★★★★",
+    author: "ryan mello",
+    treatment: "Avaliação no Google · 2 anos atrás",
+    quote: "Excellent!! The best dental clinic in Rio Branco. The service was superb from reception to the end of all procedures.",
+    year: "★★★★★",
   },
   {
     id: "review-3",
-    author: "Paciente Verificado",
-    treatment: "Implantes Dentários & Ortodontia",
-    quote: "Muito satisfeito com o profissionalismo, pontualidade e dedicação. Recomendo com certeza!",
-    year: "Google Review ★★★★★",
-  },
-  {
-    id: "review-4",
-    author: "Paciente Verificado",
-    treatment: "Estética Dental & Reabilitação Oral",
-    quote: "Ambiente acolhedor, procedimentos tranquilos e resultado excelente. Ótimo atendimento em Manaus.",
-    year: "Google Review ★★★★★",
+    author: "Francisca Amaral",
+    treatment: "Avaliação no Google · 2 anos atrás",
+    quote: "It was wonderful, excellent service.",
+    year: "★★★★★",
   },
 ];

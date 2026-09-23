@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="Dental Studio Logo"
+                  alt="Studio Oral Vitta Logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,22 +22,20 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  Dental Studio
+                  Studio Oral Vitta
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Clínica Odontológica • Carvalho Center, Parque Dez de Novembro
+                  Clínica odontológica • Floresta, Rio Branco
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Clínica odontológica de referência em Manaus, localizada no Carvalho Center, Parque Dez de Novembro. Tratamentos odontológicos modernos, implantes, ortodontia e atendimento acolhedor com excelência técnica.
+              Studio Oral Vitta, clínica odontológica em Rio Branco, Acre.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>CRO-AM Registrado</span>
+              <span>Rio Branco, Acre</span>
               <span>•</span>
-              <span>Carvalho Center</span>
-              <span>•</span>
-              <span>Parque Dez de Novembro</span>
+              <span>Avaliação 5.0 no Google Maps</span>
             </div>
           </div>
 
@@ -51,7 +49,7 @@ export default function Footer() {
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5592984798868`}
+                  href={`https://api.whatsapp.com/send?phone=5568981081266`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-15 font-semibold text-lime hover:underline"
@@ -157,7 +155,7 @@ export default function Footer() {
               <div>
                 <span className="text-paper/50 block text-13">Telefone & WhatsApp:</span>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5592984798868`}
+                  href={`https://api.whatsapp.com/send?phone=5568981081266`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-lime transition-colors font-medium"
@@ -168,14 +166,14 @@ export default function Footer() {
               <div>
                 <span className="text-paper/50 block text-13">Endereço:</span>
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
-                  {CLINIC_INFO.primaryLocation.street} - {CLINIC_INFO.primaryLocation.suite}
+                  {CLINIC_INFO.primaryLocation.street}
                   <br />
                   {CLINIC_INFO.primaryLocation.directions}
                 </address>
               </div>
               <div>
                 <span className="text-paper/50 block text-13">Plus Code:</span>
-                <span className="text-13 text-paper/70">WX7M+77 Parque Dez de Novembro, Manaus - Amazonas, Brazil</span>
+                <span className="text-13 text-paper/70">{CLINIC_INFO.primaryLocation.landmarks}</span>
               </div>
             </div>
           </div>
@@ -187,9 +185,9 @@ export default function Footer() {
             © {new Date().getFullYear()} {CLINIC_INFO.legalName}. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-6">
-            <span>CRO-AM Registrado</span>
+            <span>Floresta, Rio Branco - AC</span>
             <span>•</span>
-            <span>Carvalho Center - Manaus</span>
+            <span>Studio Oral Vitta</span>
             <span>•</span>
             <span>Avaliação 5.0 ★ no Google Maps</span>
           </div>

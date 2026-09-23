@@ -69,8 +69,7 @@ export function generateLocalBusinessSchema() {
     legalName: CLINIC_INFO.legalName,
     url: BASE_URL,
     telephone: CLINIC_INFO.contact.phone,
-    email: CLINIC_INFO.contact.email,
-    priceRange: '$$$',
+    priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${CLINIC_INFO.primaryLocation.street}, ${CLINIC_INFO.primaryLocation.suite}`,
@@ -79,23 +78,23 @@ export function generateLocalBusinessSchema() {
       postalCode: CLINIC_INFO.primaryLocation.postalCode,
       addressCountry: CLINIC_INFO.primaryLocation.country,
     },
-    geo: {
+    ...(CLINIC_INFO.primaryLocation.coordinates ? { geo: {
       '@type': 'GeoCoordinates',
       latitude: CLINIC_INFO.primaryLocation.coordinates.lat,
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
-    },
+    } } : {}),
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         opens: '08:00',
-        closes: '20:00',
+        closes: '18:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Saturday'],
         opens: '08:00',
-        closes: '18:00',
+        closes: '12:00',
       },
     ],
     medicalSpecialty: [

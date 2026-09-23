@@ -10,21 +10,17 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL('https://dentalstudiomanaus.com.br'),
   title: {
-    default: 'Dental Studio | Clínica Odontológica em Manaus',
-    template: '%s | Dental Studio',
+    default: 'Studio Oral Vitta | Clínica Odontológica em Rio Branco',
+    template: '%s | Studio Oral Vitta',
   },
   description:
-    'Dental Studio - Clínica Odontológica em Manaus, localizada no Carvalho Center, Parque Dez de Novembro. Implantes dentários, ortodontia, clínica geral e estética dental com atendimento acolhedor.',
+    'Studio Oral Vitta, clínica odontológica em Floresta, Rio Branco - Acre. Telefone: +55 68 98108-1266.',
   keywords: [
-    'Dental Studio',
-    'Dental Studio Manaus',
-    'Clínica Odontológica Manaus',
-    'Dentista Parque Dez de Novembro',
-    'Carvalho Center Manaus',
-    'Implantes Dentários Manaus',
-    'Aparelhos Ortodônticos Manaus',
+    'Studio Oral Vitta',
+    'Clínica Odontológica Rio Branco',
+    'Dentista Floresta Rio Branco',
   ],
-  authors: [{ name: 'Dental Studio' }],
+  authors: [{ name: 'Studio Oral Vitta' }],
   icons: {
     icon: [
       { url: '/images/logo.png', sizes: '32x32', type: 'image/png' },
@@ -50,7 +46,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#E8E8E6] selection:text-[#111111]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F1EEE8] selection:text-[#2C2925]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

@@ -6,10 +6,11 @@ import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import Button from '@/components/ui/Button';
 import Accordion from '@/components/ui/Accordion';
 import JsonLd from '@/components/ui/JsonLd';
+import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata, generateFaqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Atendimento Odontológico de Urgência em Manaus | Dental Studio Doctor',
+  title: 'Atendimento Odontológico de Urgência em Manaus | Dr. Fernando',
   description:
     'Atendimento odontológico para dor de dente intensa, dente quebrado ou emergências em Manaus. WhatsApp/Telefone: +55 92 99265-6280.',
   pathname: '/emergency-dentist/',
@@ -22,7 +23,7 @@ const EMERGENCY_FAQS = [
   },
   {
     question: 'O consultório oferece atendimento domiciliar de urgência?',
-    answer: 'Sim, o Dental Studio Doctor realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Manaus.',
+    answer: 'Sim, o Dr. Fernando realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Manaus.',
   },
   {
     question: 'O que fazer caso um dente quebre ou caia por trauma?',
@@ -44,6 +45,7 @@ export default function EmergencyDentistPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-6 items-start">
             <div className="lg:col-span-8">
+              <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-forest font-semibold block mb-2 uppercase tracking-wider">
                 Immediate Urgent Care
               </span>
@@ -68,9 +70,11 @@ export default function EmergencyDentistPage() {
                   Request Same-Day Slot Online
                 </Button>
               </div>
+              </AnimateOnScroll>
             </div>
 
             <div className="lg:col-span-4 p-6 bg-forest text-paper">
+              <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime font-medium uppercase tracking-wider block mb-2">
                 Walk-In Clinical Location
               </span>
@@ -84,6 +88,7 @@ export default function EmergencyDentistPage() {
               <div className="pt-3 border-t border-mist/20 text-13 text-paper/80 font-body">
                 Civic Center Plaza • Direct Ground Floor Elevator
               </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -92,19 +97,19 @@ export default function EmergencyDentistPage() {
       {/* SECTION 2 & 4: Common Dental Emergencies & Immediate Pre-Visit Actions */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <div className="mb-12">
+          <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
               Condition Identification & First-Aid
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
               What to do immediately before arriving at our clinic
             </h2>
-          </div>
+          </AnimateOnScroll>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {EMERGENCY_CONDITIONS.map((cond) => (
+            {EMERGENCY_CONDITIONS.map((cond, idx) => (
+              <AnimateOnScroll key={cond.id} animation="fade-up" delay={idx * 0.1}>
               <div
-                key={cond.id}
                 className="p-8 border border-mist bg-paper flex flex-col justify-between"
               >
                 <div>
@@ -147,6 +152,7 @@ export default function EmergencyDentistPage() {
                   <strong className="text-forest font-medium">Clinic Protocol:</strong> {cond.clinicTreatment}
                 </div>
               </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -155,7 +161,7 @@ export default function EmergencyDentistPage() {
       {/* SECTION 3: When You Should Seek Immediate Care */}
       <section className="py-16 md:py-24 border-b border-mist bg-paper">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mb-8">
+          <AnimateOnScroll animation="fade-up" duration={0.8} className="max-w-3xl mb-8">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
               Triage Criteria
             </span>
@@ -165,33 +171,33 @@ export default function EmergencyDentistPage() {
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
               Dental infections can spread rapidly into deep facial spaces if untreated. You should seek same-day care if you experience any of the following critical indicators:
             </p>
-          </div>
+          </AnimateOnScroll>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-mist/30 border border-mist">
+            <AnimateOnScroll animation="zoom-in" duration={0.8}><div className="p-6 bg-mist/30 border border-mist">
               <h3 className="font-display text-17 text-forest-ink mb-2">Visible Facial Swelling</h3>
               <p className="font-body text-13 text-forest-ink/70">
                 Swelling extending toward the cheek, jawline, eye, or throat indicates active purulent infection requiring rapid drainage.
               </p>
-            </div>
-            <div className="p-6 bg-mist/30 border border-mist">
+            </div></AnimateOnScroll>
+            <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.1}><div className="p-6 bg-mist/30 border border-mist">
               <h3 className="font-display text-17 text-forest-ink mb-2">Uncontrolled Bleeding</h3>
               <p className="font-body text-13 text-forest-ink/70">
                 Continuous oral bleeding that fails to stop after 20 minutes of firm, direct gauze pressure.
               </p>
-            </div>
-            <div className="p-6 bg-mist/30 border border-mist">
+            </div></AnimateOnScroll>
+            <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.2}><div className="p-6 bg-mist/30 border border-mist">
               <h3 className="font-display text-17 text-forest-ink mb-2">Traumatic Tooth Avulsion</h3>
               <p className="font-body text-13 text-forest-ink/70">
                 A permanent tooth dislodged by physical impact must be reimplanted within 60 minutes for highest survival rate.
               </p>
-            </div>
-            <div className="p-6 bg-mist/30 border border-mist">
+            </div></AnimateOnScroll>
+            <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.3}><div className="p-6 bg-mist/30 border border-mist">
               <h3 className="font-display text-17 text-forest-ink mb-2">Severe Pulpitis Pain</h3>
               <p className="font-body text-13 text-forest-ink/70">
                 Throbbing pain that fails to respond to maximum permitted doses of ibuprofen or acetaminophen.
               </p>
-            </div>
+            </div></AnimateOnScroll>
           </div>
         </div>
       </section>
@@ -199,17 +205,17 @@ export default function EmergencyDentistPage() {
       {/* SECTION 5: Emergency Treatment Options */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <div className="mb-12">
+          <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
               Clinical Interventions
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
               Procedures performed during emergency visits
             </h2>
-          </div>
+          </AnimateOnScroll>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-paper border border-mist">
+            <AnimateOnScroll animation="fade-up" duration={0.8}><div className="p-6 bg-paper border border-mist">
               <h3 className="font-display text-21 text-forest-ink mb-2">Microscopic Pulpotomy / Debridement</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
                 Immediate removal of inflamed pulpal nerve tissue to eliminate agonizing toothache pain instantly.
@@ -217,9 +223,9 @@ export default function EmergencyDentistPage() {
               <Link href="/root-canal/" className="font-body text-13 text-forest underline">
                 Endodontic details →
               </Link>
-            </div>
+            </div></AnimateOnScroll>
 
-            <div className="p-6 bg-paper border border-mist">
+            <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.1}><div className="p-6 bg-paper border border-mist">
               <h3 className="font-display text-21 text-forest-ink mb-2">Trauma Splinting & Reimplantation</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
                 Biological socket debridement, gentle tooth repositioning, and flexible periodontal wire stabilization.
@@ -227,9 +233,9 @@ export default function EmergencyDentistPage() {
               <Link href="/dental-implants/" className="font-body text-13 text-forest underline">
                 Implant replacement options →
               </Link>
-            </div>
+            </div></AnimateOnScroll>
 
-            <div className="p-6 bg-paper border border-mist">
+            <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}><div className="p-6 bg-paper border border-mist">
               <h3 className="font-display text-21 text-forest-ink mb-2">Abscess Incision & Decompression</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
                 Localized surgical decompression to release trapped infection pressure, accompanied by targeted antibiotics.
@@ -237,7 +243,7 @@ export default function EmergencyDentistPage() {
               <Link href="/contact/" className="font-body text-13 text-forest underline">
                 Clinic contact desk →
               </Link>
-            </div>
+            </div></AnimateOnScroll>
           </div>
         </div>
       </section>
@@ -247,6 +253,7 @@ export default function EmergencyDentistPage() {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8">
+              <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Immediate Telephone Triage
               </span>
@@ -274,15 +281,18 @@ export default function EmergencyDentistPage() {
                   WhatsApp Clinical Desk
                 </Button>
               </div>
+              </AnimateOnScroll>
             </div>
 
             <div className="lg:col-span-4 p-6 bg-paper/10 border border-mist/20">
+              <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime block mb-2 font-medium">
                 Walk-In Triage Policy
               </span>
               <p className="font-body text-13 text-paper/80 leading-relaxed">
                 While we recommend calling ahead so we can prepare a sterile suite, true acute dental trauma walk-ins are welcomed directly at our Civic Center pavilion during business hours.
               </p>
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -293,6 +303,7 @@ export default function EmergencyDentistPage() {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-6">
+              <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2">Location</span>
               <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
                 How to reach our emergency clinic
@@ -307,9 +318,11 @@ export default function EmergencyDentistPage() {
               <p className="font-body text-13 text-forest-ink/70">
                 {CLINIC_INFO.primaryLocation.directions}
               </p>
+              </AnimateOnScroll>
             </div>
 
             <div className="lg:col-span-6">
+              <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2">Operating Hours</span>
               <div className="border border-mist divide-y divide-mist bg-paper font-body text-13">
                 <div className="p-3 flex justify-between">
@@ -329,6 +342,7 @@ export default function EmergencyDentistPage() {
                   <span>24/7 On-Call Triage Phone</span>
                 </div>
               </div>
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -339,13 +353,17 @@ export default function EmergencyDentistPage() {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
+              <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2">FAQs</span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
                 Emergency care FAQs
               </h2>
+              </AnimateOnScroll>
             </div>
             <div className="lg:col-span-7">
+              <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <Accordion items={EMERGENCY_FAQS} />
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -354,11 +372,12 @@ export default function EmergencyDentistPage() {
       {/* SECTION 10: Final Emergency Action CTA */}
       <section className="py-16 md:py-24 bg-forest text-paper">
         <div className="max-w-site mx-auto px-6 md:px-12 text-center flex flex-col items-center">
+          <AnimateOnScroll animation="fade-up" duration={0.8} className="flex flex-col items-center">
           <h2 className="font-display text-33 md:text-41 text-paper mb-4">
             Do not endure severe dental pain.
           </h2>
           <p className="font-body text-15 md:text-17 text-paper/80 mb-8 max-w-xl">
-            Dental Studio Doctor is here to help relieve your pain and preserve your natural tooth structure.
+            Dr. Fernando is here to help relieve your pain and preserve your natural tooth structure.
           </p>
           <Button
             href={`tel:${CLINIC_INFO.contact.emergencyPhone.replace(/[^0-9+]/g, '')}`}
@@ -368,6 +387,7 @@ export default function EmergencyDentistPage() {
           >
             Call {CLINIC_INFO.contact.emergencyPhone}
           </Button>
+          </AnimateOnScroll>
         </div>
       </section>
     </div>
