@@ -128,25 +128,33 @@ export default function HomeHero() {
           {/* Columns 1–8: Left-aligned H1, Paragraph, Actions */}
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
+            <div className="flex items-center gap-3 mb-4 md:mb-5">
+              <span aria-hidden="true" className="h-px w-8 bg-[#B59A6A]" />
+              <span className="font-body text-[11px] text-[#766E63] uppercase tracking-[0.14em]">
+                Your smile. Our priority.
+              </span>
+            </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
               className="font-display text-[#2C2925] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
-                <span
-                  key={idx}
-                  className="inline-block overflow-hidden align-top pb-[0.08em] mr-[0.24em] last:mr-0"
-                >
-                  <span
-                    ref={(el) => {
-                      if (el) wordsRef.current[idx] = el;
-                    }}
-                    className="inline-block will-change-transform"
-                  >
-                    {word}
+                <React.Fragment key={idx}>
+                  <span className="inline-block overflow-hidden align-top pb-[0.08em] mr-[0.24em] last:mr-0">
+                    <span
+                      ref={(el) => {
+                        if (el) wordsRef.current[idx] = el;
+                      }}
+                      className={`inline-block will-change-transform ${['shaped', 'by', 'clinical'].includes(word) ? 'text-[#B59A6A]' : ''}`}
+                    >
+                      {word}
+                    </span>
                   </span>
-                </span>
+                  {(idx === 1 || idx === 4) && (
+                    <br className="hidden sm:block" />
+                  )}
+                </React.Fragment>
               ))}
             </h1>
 
